@@ -1,23 +1,36 @@
 import "./App.css";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 
 function App() {
   useEffect(() => {
+    setInterval(
+      () => {
+        setDate(new Date());
+      },
+      1000
+    )
   },[]);
-  
-  let date = new Date();
-  let hrs = date.getHours() > 12 ? date.getHours() - 12 : date.getHours();
-  let mins = date.getMinutes() < 10 ? `0${date.getMinutes()}`: date.getMinutes();
-  let seconds = date.getSeconds();
 
-  return <>
-  <div style={{color:'red', fontWeight:'bolder', fontSize:'70px'}}>
-    Good Morning, Levi
-    <div style={{color:'red'}}>
-      {hrs}:{mins}:{seconds}
-    </div>
-  </div>
-  </>;
+  const [date, setDate] = useState(new Date());
+
+  return (
+    <>
+    
+      <div style={{ color: "white", fontWeight: "bolder", fontSize: "70px" }}>
+        Good Morning, Levi
+        <div style={{ color: "white" }}>
+          {date.toLocaleString("en-GB", {
+            hour: "numeric",
+            minute: "numeric",
+            second: "numeric",
+            hour12: true,
+          })}
+        </div>
+        <input type="text" id="fname" name="fname"/>
+
+      </div>
+    </>
+  );
 }
 
 export default App;
