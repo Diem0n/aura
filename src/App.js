@@ -3,14 +3,19 @@ import { useEffect } from "react";
 
 function App() {
   useEffect(() => {
-    let body = document.getElementById("body");
-    body.style.backgroundImage =
-      "url(https://source.unsplash.com/1600x900/?nature)";
-  }, []);
+  },[]);
+  
+  let date = new Date();
+  let hrs = date.getHours() > 12 ? date.getHours() - 12 : date.getHours();
+  let mins = date.getMinutes() < 10 ? `0${date.getMinutes()}`: date.getMinutes();
+  let seconds = date.getSeconds();
 
   return <>
-  <div className="container" style={{color:'white', fontWeight:'bolder', fontSize:'70px'}}>
+  <div style={{color:'red', fontWeight:'bolder', fontSize:'70px'}}>
     Good Morning, Levi
+    <div style={{color:'red'}}>
+      {hrs}:{mins}:{seconds}
+    </div>
   </div>
   </>;
 }
