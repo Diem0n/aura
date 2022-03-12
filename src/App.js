@@ -36,6 +36,13 @@ function App() {
     setNameText(e.target.value);
   }
 
+  const resetUserName = (e) => {
+    e.preventDefault();
+    localStorage.removeItem('username');
+    setName(localStorage.getItem('username') || "N/A");
+    setIsNameSubmitted(false);
+  }
+  
   // main goal for today
 
   const goalTextChangeHandler = e => {
@@ -48,6 +55,13 @@ function App() {
     localStorage.setItem('goal', goalText);
     setGoal(localStorage.getItem('goal') || "N/A");
     setIsGoalSubmitted(true);
+  }
+
+  const resetGoal = (e) => {
+    e.preventDefault();
+    localStorage.removeItem('goal');
+    setGoal(localStorage.getItem('goal') || "N/A");
+    setIsGoalSubmitted(false);
   }
 
   return (
@@ -69,39 +83,47 @@ function App() {
 
           {!isNameSubmitted ?
             <>
-              <h2 className="text-white text-2xl  m-2">What's your name?</h2>
+              <h2 className="text-white text-3xl  m-2">What's your name?</h2>
               <form onSubmit={userNameSubmitHandler}>
-                {<input type="text" className="m-2 outline-none w-80 bg-transparent border-b-2 border-white text-white" onChange={nameTextChangeHandler} />}
+                {<input type="text" className="m-2 p-2 outline-none w-80 bg-transparent border-b-2 border-white text-white text-3xl text-center" onChange={nameTextChangeHandler} />}
               </form>
             </>
-            : <div className="text-5xl text-white font-Poppins p-3">
-              Good {
-                date.getHours() < 12 ?
-                  "Morning" :
-                  date.getHours() >= 12 && date.getHours() <= 17
-                    ? "Afternoon" :
-                    "Evening"
-              }, {name}.
-            </div>
+            :
+            <>
+              <div className="flex">
+                <div className="text-5xl text-white font-Poppins p-3">
+                  Good {
+                    date.getHours() < 12 ?
+                      "Morning" :
+                      date.getHours() >= 12 && date.getHours() <= 17
+                        ? "Afternoon" :
+                        "Evening"
+                  }, {name}.
+                </div>
+                <button className="text-white m-2 p-2 text-lg" onClick={resetUserName}>
+                  {<EditIcon fontSize="1px" />}
+                </button>
+              </div>
+            </>
           }
 
           <div className="p-28">
             {!isGoalSubmitted ?
               <>
                 <div className={isNameSubmitted ? 'visible' : 'invisible'}>
-                  <h2 className="text-white text-2xl  m-2">What is your goal for today?</h2>
+                  <h2 className="text-white text-3xl  m-2">What's your goal for today?</h2>
                   <form onSubmit={goalSubmitHandler}>
-                    {<input type="text" className="font-Poppins m-2 outline-none w-80 bg-transparent border-b-2 border-white text-white" onChange={goalTextChangeHandler} />}
+                    {<input type="text" className="font-Poppins m-2 p-2 outline-none w-96 bg-transparent border-b-2 border-white text-white text-3xl text-center" onChange={goalTextChangeHandler} />}
                   </form>
                 </div>
               </> :
               <>
-                <div className="{isNameSubmitted ? 'visible' : 'invisible'} backdrop-blur-sm">
-                  <h2 className="font-Poppins text-white text-3xl text-center m-2">Your goal for today is</h2>
+                <div className="{isNameSubmitted ? 'visible' : 'invisible'} backdrop-blur-sm py-3 px-3">
+                  <h2 className="font-Poppins text-white text-3xl text-center m-2">Your goal for today</h2>
                   <div className="flex justify-around">
                     <ul className="font-Poppins text-white text-3xl text-center m-2">{goal.charAt(0).toUpperCase() + goal.substr(1).toLowerCase()}</ul>
-                    <button className="text-white m-2 p-2 text-lg" onClick={() => setIsGoalSubmitted(false)}>
-                      {<EditIcon />}
+                    <button className="text-white m-2 p-2 text-lg" onClick={resetGoal}>
+                      {<EditIcon fontSize="1px" />}
                     </button>
                   </div>
                 </div>
