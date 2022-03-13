@@ -4,17 +4,33 @@ import EditIcon from '@mui/icons-material/Edit';
 import ThermostatAutoIcon from '@mui/icons-material/ThermostatAuto';
 
 function App() {
-  useEffect(() => {
-    setInterval(
-      () => {
-        setDate(new Date());
-      },
-      1000
-    );
-  }, []);
+
+  // quote
+  const api_url = "https://quotes.rest/qod?language=en";
+
+  async function getapi(url) {
+    const response = await fetch(url);
+    let data = await response.json();
+    setQuote(data.contents.quotes[0].quote);
+  }
+
+
+
+  useEffect(
+    () => {
+      getapi(api_url);
+      setInterval(
+        () => {
+          setDate(new Date());
+        },
+        1000
+      );
+    }, []);
 
   const [date, setDate] = useState(new Date());
   // todo show name input only if localstorage does not have the username
+  const [quote, setQuote] = useState("");
+
 
   const [name, setName] = useState(localStorage.getItem('username') || "N/A");
   const [nameText, setNameText] = useState("");
@@ -42,7 +58,7 @@ function App() {
     setName(localStorage.getItem('username') || "N/A");
     setIsNameSubmitted(false);
   }
-  
+
   // main goal for today
 
   const goalTextChangeHandler = e => {
@@ -66,13 +82,46 @@ function App() {
 
   return (
     <>
+      <div className="flex flex-row w-full justify-center  pt-5 ">
+        <a href="https://www.youtube.com" className="px-5 m-1">
+          <img src="youtube_icon.png" height={25} width={25} className="hover:scale-150" title="YouTube"/>
+        </a>
+        {/*  */}
+        <a href="https://web.whatsapp.com" className="px-5 m-1">
+          <img src="wa.png" height={25} width={25} className="hover:scale-150" title="WhatsApp Web"/>
+        </a>
+
+        <a href="https://www.courera.org" className="px-5 m-1">
+          <img src="csa-2.png" height={25} width={25} className="hover:scale-150" title="Coursera"/>
+        </a>
+
+        <a href="https://www.leetcode.com" className="px-5 m-1">
+          <img src="leetcode-2.png" height={25} width={25} className="hover:scale-150" title="LeetCode"/>
+        </a>
+
+        <a href="https://www.mail.google.com" className="px-5 m-1">
+          <img src="gmail-2.png" height={25} width={25} className="hover:scale-150" title="Gmail"/>
+        </a>
+
+        <a href="https://www.github.com" className="px-5 m-1">
+          <img src="gh.png" height={25} width={25} className="hover:scale-150" title="GitHub"/>
+        </a>
+
+        <a href="https://www.stackoverflow.com" className="px-5 m-1">
+          <img src="so-2.png" height={25} width={25} className="hover:scale-150" title="Stack Overflow"/>
+        </a>
+      </div>
+      {/*  */}
+
+
+
       <div className="p-5 text-shadow-lg">
         <div className="text-right text-white">
           <button>
             <ThermostatAutoIcon fontSize='large' />
           </button>
         </div>
-        <div className="flex flex-col h-90v justify-center items-center">
+        <div className="flex flex-col h-80vv justify-center items-center">
           <div className="text-9xl text-white font-semibold p-5">
             {date.toLocaleString("en-GB", {
               hour: "numeric",
@@ -118,10 +167,10 @@ function App() {
                 </div>
               </> :
               <>
+                <h2 className="font-Poppins text-white text-4xl text-center m-2">🎯🚀</h2>
                 <div className="{isNameSubmitted ? 'visible' : 'invisible'} backdrop-blur-sm py-3 px-3">
-                  <h2 className="font-Poppins text-white text-3xl text-center m-2">Your goal for today</h2>
                   <div className="flex justify-around">
-                    <ul className="font-Poppins text-white text-3xl text-center m-2">{goal.charAt(0).toUpperCase() + goal.substr(1).toLowerCase()}</ul>
+                    <ul className="font-Poppins text-white text-6xl text-center m-2">{goal.charAt(0).toUpperCase() + goal.substr(1).toLowerCase()}</ul>
                     <button className="text-white m-2 p-2 text-lg" onClick={resetGoal}>
                       {<EditIcon fontSize="1px" />}
                     </button>
@@ -131,6 +180,8 @@ function App() {
             }
           </div>
         </div>
+        {/*  */}
+        {<h2 className="text-white text-2xl text-center backdrop-blur-sm"> {quote} </h2>}
       </div>
     </>
   );
