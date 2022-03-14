@@ -36,3 +36,11 @@
     transform: rotate(360deg);
   }
 }
+
+* {
+  /* make text un-selectable */
+  -webkit-user-select: none; /* Chrome all and Safari all */
+  -moz-user-select: none; /* Firefox all */
+  -ms-user-select: none; /* Internet Explorer 10 and later */
+  user-select: none; /* Likely future */
+}
