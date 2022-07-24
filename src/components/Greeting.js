@@ -32,12 +32,12 @@ function Greeting() {
     <>
       {!isNameSubmitted ? (
         <>
-          <h2 className="text-white text-3xl  m-2">What's your name?</h2>
+          <h2 className="text-white text-3xl">What's your name?</h2>
           <form onSubmit={userNameSubmitHandler}>
             {
               <input
                 type="text"
-                className="m-2 p-2 outline-none w-80 bg-transparent border-b-2 border-white text-white text-3xl text-center"
+                className="m-2 p-1 outline-none w-80 bg-transparent border-b-2 border-white text-white text-2xl text-center"
                 onChange={nameTextChangeHandler}
               />
             }
@@ -55,10 +55,7 @@ function Greeting() {
                 : "Evening"}
               , {name}.
             </div>
-            <button
-              className="text-white m-2 p-2 text-lg"
-              onClick={resetUserName}
-            >
+            <button className="text-white text-lg" onClick={resetUserName}>
               {<EditIcon fontSize="1px" />}
             </button>
           </div>

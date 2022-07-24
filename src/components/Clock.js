@@ -11,15 +11,11 @@ function Clock() {
   const [date, setDate] = useState(new Date());
 
   return (
-    <div className="text-9xl text-white font-semibold p-5">
-      {date
-        .toLocaleString("en-GB", {
-          hour: "numeric",
-          minute: "numeric",
-          hour12: true,
-        })
-        .replace("am", "AM")
-        .replace("pm", "PM")}
+    <div className="h-full text-9xl text-white font-semibold p-5">
+      {date.toLocaleString("en-GB", {
+        hour: "numeric",
+        minute: "numeric",
+      })}
     </div>
   );
 }

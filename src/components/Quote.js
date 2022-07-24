@@ -9,6 +9,7 @@ function Quote() {
     const response = await fetch(url);
     let data = await response.json();
     setQuote(data.contents.quotes[0].quote);
+    setAuthor(data.contents.quotes[0].author);
   }
 
   useEffect(() => {
@@ -16,12 +17,13 @@ function Quote() {
   });
 
   const [quote, setQuote] = useState("");
+  const [author, setAuthor] = useState("");
 
   return (
-    <h2 className="text-white text-2xl text-center backdrop-blur-sm">
-      {" "}
-      {quote}{" "}
-    </h2>
+    <>
+      <h2 className="text-white text-2xl text-center mt-10">{quote}</h2>
+      <h2 className="text-white text-2xl text-center ">- {author}</h2>
+    </>
   );
 }
 

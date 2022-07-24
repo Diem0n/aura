@@ -38,7 +38,7 @@ function DayGoal() {
               {
                 <input
                   type="text"
-                  className="font-Poppins m-2 p-2 outline-none w-96 bg-transparent border-b-2 border-white text-white text-3xl text-center"
+                  className="font-Poppins p-1 outline-none w-96 bg-transparent border-b-2 border-white text-white text-3xl text-center"
                   onChange={goalTextChangeHandler}
                 />
               }
@@ -47,18 +47,15 @@ function DayGoal() {
         </>
       ) : (
         <>
-          <div className="backdrop-blur-sm py-3 px-3">
+          <div className=" py-3 px-3">
+            <h2 className="font-Poppins text-white text-2xl text-center ">
+              🎯
+            </h2>
             <div className="flex justify-around">
-              <h2 className="font-Poppins text-white text-3xl text-center m-2">
-                Your goal 🎯 for today:
-              </h2>
-              <ul className="font-Poppins text-white text-4xl text-center m-2">
+              <ul className="font-Poppins text-white text-3xl text-center m-2">
                 {goal.charAt(0).toUpperCase() + goal.substr(1).toLowerCase()}
               </ul>
-              <button
-                className="text-white m-2 p-2 text-lg"
-                onClick={resetGoal}
-              >
+              <button className="text-white text-lg" onClick={resetGoal}>
                 {<EditIcon fontSize="1px" />}
               </button>
             </div>
