@@ -7,7 +7,9 @@ function Clock() {
       setDate(new Date());
     }, 1000);
   }, []);
+
   const [date, setDate] = useState(new Date());
+
   return (
     <div className="text-9xl text-white font-semibold p-5">
       {date
