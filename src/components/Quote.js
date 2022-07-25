@@ -8,6 +8,7 @@ function Quote() {
   async function getapi(url) {
     const response = await fetch(url);
     let data = await response.json();
+
     setQuote(data.contents.quotes[0].quote);
     setAuthor(data.contents.quotes[0].author);
   }
