@@ -22,7 +22,7 @@ function Quote() {
 
   return (
     <>
-      <h2 className="text-white text-2xl text-center mt-10">{quote}</h2>
+      <h2 className="text-white text-2xl text-center">{quote}</h2>
       <h2 className="text-white text-2xl text-center ">- {author}</h2>
     </>
   );

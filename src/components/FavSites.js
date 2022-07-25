@@ -1,76 +1,31 @@
 import React from "react";
+import yt from "../youtube.png";
+import mail from "../gmail.png";
+import fiverr from "../fiverr.png";
+import leetcode from "../leetcode.png";
+import so from "../so.png";
+import github from "../github.png";
 
 function FavSites() {
   return (
-    <div className="flex flex-row w-full justify-center  pt-5 ">
-      <a href="https://www.youtube.com" className="px-5 m-1">
-        <img
-          src="../youtube_icon.png"
-          height={25}
-          width={25}
-          className="hover:scale-150"
-          title="YouTube"
-        />
+    <div className="grid grid-cols-3 gap-y-20 mt-56 px-5 text-white font-Poppins">
+      <a href="https://www.youtube.com">
+        <img src={yt} width={60} height={60} />
       </a>
-      {/*  */}
-      <a href="https://web.whatsapp.com" className="px-5 m-1">
-        <img
-          src="../wa.png"
-          height={25}
-          width={25}
-          className="hover:scale-150"
-          title="WhatsApp Web"
-        />
+      <a href="https://www.mail.google.com">
+        <img src={mail} width={60} height={60} />
       </a>
-
-      <a href="https://www.courera.org" className="px-5 m-1">
-        <img
-          src="../csa-2.png"
-          height={25}
-          width={25}
-          className="hover:scale-150"
-          title="Coursera"
-        />
+      <a href="https://www.github.com">
+        <img src={github} width={60} height={60} />
       </a>
-
-      <a href="https://www.leetcode.com" className="px-5 m-1">
-        <img
-          src="../leetcode-2.png"
-          height={25}
-          width={25}
-          className="hover:scale-150"
-          title="LeetCode"
-        />
+      <a href="https://www.leetcode.com">
+        <img src={leetcode} width={60} height={60} />
       </a>
-
-      <a href="https://www.mail.google.com" className="px-5 m-1">
-        <img
-          src="../gmail-2.png"
-          height={25}
-          width={25}
-          className="hover:scale-150"
-          title="Gmail"
-        />
+      <a href="https://www.stackoverflow.com">
+        <img src={so} width={60} height={60} />
       </a>
-
-      <a href="https://www.github.com" className="px-5 m-1">
-        <img
-          src="../gh.png"
-          height={25}
-          width={25}
-          className="hover:scale-150"
-          title="GitHub"
-        />
-      </a>
-
-      <a href="https://www.stackoverflow.com" className="px-5 m-1">
-        <img
-          src="../so-2.png"
-          height={25}
-          width={25}
-          className="hover:scale-150"
-          title="Stack Overflow"
-        />
+      <a href="https://www.fiverr.com">
+        <img src={fiverr} width={60} height={60} />
       </a>
     </div>
   );

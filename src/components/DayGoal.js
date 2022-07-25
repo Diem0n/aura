@@ -31,9 +31,7 @@ function DayGoal() {
       {!isGoalSubmitted ? (
         <>
           <div>
-            <h2 className="text-white text-3xl  m-2">
-              What's your goal for today?
-            </h2>
+            <h2 className="text-white text-3xl">What's your goal for today?</h2>
             <form onSubmit={goalSubmitHandler}>
               {
                 <input

@@ -7,7 +7,7 @@ import DayGoal from "./components/DayGoal";
 import Greeting from "./components/Greeting";
 import Weather from "./components/Weather";
 import day from "./day.jpg";
-import night from "./night.jpg";
+import night from "./night__.jpg";
 
 function App() {
   const [data, setData] = useState([]);
@@ -46,13 +46,13 @@ function App() {
   return (
     <>
       <div
-        className=" grid grid-cols-4 grid-rows-3 py-20 px-1 gap-y-16"
+        className=" grid grid-cols-4 grid-rows-3 py-16 px-1 gap-y-16"
         style={{}}
       >
         <div className="w-full h-full row-span-2 row-start-1 col-start-1">
           <FavSites />
         </div>
-        <div className=" w-full h-4/5 text-center col-span-2 flex flex-col justify-center items-center">
+        <div className=" w-full  h-4/5 text-center col-span-2 flex flex-col justify-center items-center">
           <Clock />
           <Greeting />
         </div>
@@ -66,9 +66,9 @@ function App() {
           )}
         </div>
         {/* //* bugfix #3 push quote below */}
-        <div className=" w-full h-full mt-2 text-center col-span-2 flex flex-col justify-between align-middle items-center row-start-2 col-start-2">
+        <div className=" w-full text-center col-span-2 flex flex-col justify-between align-middle items-center row-start-2 col-start-2">
           <DayGoal />
-          <div className="mt-10">
+          <div className="">
             <Quote />
           </div>
         </div>
