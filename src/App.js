@@ -6,6 +6,8 @@ import Clock from "./components/Clock";
 import DayGoal from "./components/DayGoal";
 import Greeting from "./components/Greeting";
 import Weather from "./components/Weather";
+import day from "./day.jpg";
+import night from "./night.jpg";
 
 function App() {
   const [data, setData] = useState([]);
@@ -13,10 +15,15 @@ function App() {
   const [lon, setLon] = useState(0);
 
   useEffect(() => {
+    if (new Date().getHours() <= 6 && new Date().getHours() >= 18) {
+      document.body.style.backgroundImage = `url('${day}')`;
+    } else {
+      document.body.style.backgroundImage = `url('${night}')`;
+    }
     const fetchCoords = async () => {
       await navigator.geolocation.getCurrentPosition(function (position) {
-        console.log("Latitude is :", position.coords.latitude);
-        console.log("Longitude is :", position.coords.longitude);
+        // console.log("Latitude is :", position.coords.latitude);
+        // console.log("Longitude is :", position.coords.longitude);
         setLat(position.coords.latitude);
         setLon(position.coords.longitude);
       });
@@ -38,9 +45,12 @@ function App() {
 
   return (
     <>
-      <div className=" grid grid-cols-4 grid-rows-3 p-20 gap-y-16">
-        <div className="bg-yellow-600 w-full h-4/5 row-span-2 row-start-1 col-start-1">
-          FAVS
+      <div
+        className=" grid grid-cols-4 grid-rows-3 py-20 px-1 gap-y-16"
+        style={{}}
+      >
+        <div className="w-full h-full row-span-2 row-start-1 col-start-1">
+          <FavSites />
         </div>
         <div className=" w-full h-4/5 text-center col-span-2 flex flex-col justify-center items-center">
           <Clock />
@@ -56,7 +66,7 @@ function App() {
           )}
         </div>
         {/* //* bugfix #3 push quote below */}
-        <div className=" w-full h-full mt-4 text-center col-span-2 flex flex-col justify-between align-middle items-center row-start-2 col-start-2">
+        <div className=" w-full h-full mt-2 text-center col-span-2 flex flex-col justify-between align-middle items-center row-start-2 col-start-2">
           <DayGoal />
           <div className="mt-10">
             <Quote />
