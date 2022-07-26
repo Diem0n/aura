@@ -1,6 +1,6 @@
 # Aura
 
-_Yet another_ Momentum dashboard clone ;)
+_Yet another_ Momentum dashboard extension clone ;)
 
 A Google Chrome extension made with `React` and `Tailwind CSS`.
 
@@ -22,6 +22,8 @@ A Google Chrome extension made with `React` and `Tailwind CSS`.
 ![image](https://user-images.githubusercontent.com/48406637/180855370-eaacab7a-1f45-4a3a-8c2f-8571d297a85c.png)
 
 ![image](https://user-images.githubusercontent.com/48406637/180855567-081c60eb-6581-4d18-9ca2-9e97704b8ca8.png)
+
+![image](https://user-images.githubusercontent.com/48406637/180959628-4498f5c3-c8e8-4350-a137-755bdbdfd35d.png)
 
 
 ## Usage
