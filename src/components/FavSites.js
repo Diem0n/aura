@@ -12,7 +12,7 @@ function FavSites() {
       <a href="https://www.youtube.com">
         <img src={yt} width={60} height={60} />
       </a>
-      <a href="https://www.mail.google.com">
+      <a href="https://mail.google.com/mail/u/0/#inbox">
         <img src={mail} width={60} height={60} />
       </a>
       <a href="https://www.github.com">

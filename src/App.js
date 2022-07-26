@@ -15,7 +15,7 @@ function App() {
   const [lon, setLon] = useState(0);
 
   useEffect(() => {
-    if (new Date().getHours() <= 6 && new Date().getHours() >= 18) {
+    if (new Date().getHours() <= 6 && new Date().getHours() <= 18) {
       document.body.style.backgroundImage = `url('${day}')`;
     } else {
       document.body.style.backgroundImage = `url('${night}')`;
