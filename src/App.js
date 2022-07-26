@@ -15,9 +15,11 @@ function App() {
   const [lon, setLon] = useState(0);
 
   useEffect(() => {
-    if (new Date().getHours() <= 6 && new Date().getHours() <= 18) {
+    if (new Date().getHours() >= 6 && new Date().getHours() <= 18) {
+      console.log("day", new Date().getHours());
       document.body.style.backgroundImage = `url('${day}')`;
     } else {
+      console.log("night", new Date().getHours());
       document.body.style.backgroundImage = `url('${night}')`;
     }
     const fetchCoords = async () => {
