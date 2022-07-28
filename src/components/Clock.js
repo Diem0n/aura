@@ -11,7 +11,7 @@ function Clock() {
   const [date, setDate] = useState(new Date());
 
   return (
-    <div className="h-full font-Poppins text-9xl text-white p-5">
+    <div className="font-Poppins text-9xl text-white pt-2">
       {date.toLocaleString("en-GB", {
         hour: "numeric",
         minute: "numeric",
