@@ -6,8 +6,8 @@ import Clock from "./components/Clock";
 import DayGoal from "./components/DayGoal";
 import Greeting from "./components/Greeting";
 import Weather from "./components/Weather";
-import day from "./day.jpg";
-import night from "./night__.jpg";
+import day from "./d.jpg";
+import night from "./n.jpg";
 
 function App() {
   const [data, setData] = useState([]);
@@ -47,16 +47,17 @@ function App() {
 
   return (
     <>
-      <div
-        className=" grid grid-cols-4 grid-rows-3 py-16 px-1 gap-y-16"
-        style={{}}
-      >
-        <div className="w-full h-full row-span-2 row-start-1 col-start-1">
+      <div className=" grid grid-cols-4 grid-rows-1 py-1 px-1" style={{}}>
+        <div className="w-full h-full  col-start-1">
           <FavSites />
         </div>
-        <div className=" w-full  h-4/5 text-center col-span-2 flex flex-col justify-center items-center">
+        <div className="w-full h-screen text-center col-span-2 flex flex-col justify-between items-center p-5">
           <Clock />
           <Greeting />
+          <DayGoal />
+          <div>
+            <Quote className="flex flex-col" />
+          </div>
         </div>
         <div className=" h-4/5 text-white font-Poppins">
           {typeof data.main != "undefined" ? (
@@ -68,12 +69,6 @@ function App() {
           )}
         </div>
         {/* //* bugfix #3 push quote below */}
-        <div className=" w-full text-center col-span-2 flex flex-col justify-between align-middle items-center row-start-2 col-start-2">
-          <DayGoal />
-          <div className="">
-            <Quote />
-          </div>
-        </div>
       </div>
     </>
   );

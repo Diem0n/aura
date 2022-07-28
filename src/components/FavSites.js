@@ -8,7 +8,7 @@ import github from "../github.png";
 
 function FavSites() {
   return (
-    <div className="grid grid-cols-3 gap-y-20 mt-56 px-5 text-white font-Poppins">
+    <div className="grid grid-cols-3 gap-y-10 mt-56 px-5 text-white font-Poppins">
       <a href="https://www.youtube.com">
         <img src={yt} width={60} height={60} />
       </a>
