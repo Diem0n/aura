@@ -1,10 +1,10 @@
 import React from "react";
-import yt from "../youtube.png";
-import mail from "../gmail.png";
-import fiverr from "../fiverr.png";
-import leetcode from "../leetcode.png";
-import so from "../so.png";
-import github from "../github.png";
+import yt from "../images/youtube.png";
+import mail from "../images/gmail.png";
+import fiverr from "../images/fiverr.png";
+import leetcode from "../images/leetcode.png";
+import so from "../images/so.png";
+import github from "../images/github.png";
 
 function FavSites() {
   return (

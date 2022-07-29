@@ -6,8 +6,8 @@ import Clock from "./components/Clock";
 import DayGoal from "./components/DayGoal";
 import Greeting from "./components/Greeting";
 import Weather from "./components/Weather";
-import day from "./day.jpg";
-import night from "./night.jpg";
+import day from "./images/day.jpg";
+import night from "./images/night.jpg";
 
 function App() {
   const [data, setData] = useState([]);
@@ -24,8 +24,6 @@ function App() {
     }
     const fetchCoords = async () => {
       await navigator.geolocation.getCurrentPosition(function (position) {
-        // console.log("Latitude is :", position.coords.latitude);
-        // console.log("Longitude is :", position.coords.longitude);
         setLat(position.coords.latitude);
         setLon(position.coords.longitude);
       });
@@ -38,7 +36,6 @@ function App() {
         .then((res) => res.json())
         .then((result) => {
           setData(result);
-          console.log(result);
         });
     };
     fetchCoords();
@@ -68,7 +65,6 @@ function App() {
             </div>
           )}
         </div>
-        {/* //* bugfix #3 push quote below */}
       </div>
     </>
   );

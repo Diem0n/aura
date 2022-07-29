@@ -1,5 +1,5 @@
 import React from "react";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import EditIcon from "@mui/icons-material/Edit";
 
 function Greeting() {
@@ -62,16 +62,6 @@ function Greeting() {
               </button>
             </div>
           </div>
-          {/* 
-              //* bugfix : see #3
-              THIS IS JUST A HACK TO TAKE SOME SCREEN SIZE SO THAT QUOTE GETS PUSHED DOWNWARD
-              IS IT RESPONSIVE? I DONT THINK SO
-              IS THERE A BETTER WAY TO DO IT? CERTAINLY YES
-              BUT
-              ILL BE DAMNED IF I HAVE TO SIT ANOTHER COUPLE HOURS SCRATCHING MY HEAD 
-              TO FIND A SOLUTION FOR THIS PROBLEM        
-          */}
-          {/* {<h2 className="text-transparent text-2xl">What's your name?</h2>} */}
         </>
       )}
     </>
