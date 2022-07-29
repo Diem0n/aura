@@ -6,8 +6,8 @@ import Clock from "./components/Clock";
 import DayGoal from "./components/DayGoal";
 import Greeting from "./components/Greeting";
 import Weather from "./components/Weather";
-import day from "./d.jpg";
-import night from "./n.jpg";
+import day from "./day.jpg";
+import night from "./night.jpg";
 
 function App() {
   const [data, setData] = useState([]);
@@ -51,7 +51,7 @@ function App() {
         <div className="w-full h-full  col-start-1">
           <FavSites />
         </div>
-        <div className="w-full h-screen text-center col-span-2 flex flex-col justify-between items-center p-5">
+        <div className="w-full h-screen text-center col-span-2 flex flex-col justify-between items-center p-4">
           <Clock />
           <Greeting />
           <DayGoal />
