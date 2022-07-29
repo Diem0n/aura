@@ -46,9 +46,12 @@
 }
 
 body {
-  /* width: auto;
-  height: 100%; */
-  /* max-width: 100%; */
-  backdrop-filter: blur(2px);
+  width: auto;
+  height: 100%;
+  max-width: 100%;
+  backdrop-filter: blur(12px);
   overflow: hidden;
+  background-size: cover;
+  background-size: 100% 100%;
+  background-position: 50% 50%;
 }
