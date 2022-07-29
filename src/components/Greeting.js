@@ -54,10 +54,13 @@ function Greeting() {
                 ? "Afternoon"
                 : "Evening"}
               , {name}.
+              <button
+                className="text-white text-xs align-top"
+                onClick={resetUserName}
+              >
+                {<EditIcon fontSize="1px" />}
+              </button>
             </div>
-            <button className="text-white text-lg" onClick={resetUserName}>
-              {<EditIcon fontSize="1px" />}
-            </button>
           </div>
           {/* 
               //* bugfix : see #3
