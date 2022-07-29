@@ -46,16 +46,16 @@ function Greeting() {
       ) : (
         <>
           <div className="flex">
-            <div className="text-5xl text-white font-Poppins p-3">
+            <div className="text-5xl text-white font-Poppins p-2">
               Good{" "}
               {new Date().getHours() < 12
                 ? "Morning"
                 : new Date().getHours() >= 12 && new Date().getHours() <= 17
                 ? "Afternoon"
                 : "Evening"}
-              , {name}.
+              , {name}!
               <button
-                className="text-white text-xs align-top"
+                className="ml-2 text-white text-xs align-top"
                 onClick={resetUserName}
               >
                 {<EditIcon fontSize="1px" />}
