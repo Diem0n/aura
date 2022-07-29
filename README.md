@@ -19,7 +19,8 @@ A Google Chrome extension made with `React` and `Tailwind CSS`.
 - improved layout
 
 ## In Action 📸
-![image](https://user-images.githubusercontent.com/48406637/181618532-27baa3f6-84c0-4595-b120-bb0d120763b8.png)
+![image](https://user-images.githubusercontent.com/48406637/181732822-835e7436-25a8-4641-9a83-60f6851f29fe.png)![image](https://user-images.githubusercontent.com/48406637/181732823-e82dec24-08f3-4db4-ba84-074c4401c955.png)
+
 
 
 ## Usage
