@@ -49,11 +49,14 @@ function DayGoal() {
             <h2 className="font-Poppins text-white text-2xl text-center ">
               🎯
             </h2>
-            <div className="flex justify-around">
-              <ul className="font-Poppins text-white text-3xl text-center m-2">
+            <div className="flex">
+              <ul className="font-Poppins text-white text-3xl text-center mr-2">
                 {goal.charAt(0).toUpperCase() + goal.substr(1).toLowerCase()}
               </ul>
-              <button className="text-white text-lg" onClick={resetGoal}>
+              <button
+                className="flex text-white text-xs align-top"
+                onClick={resetGoal}
+              >
                 {<EditIcon fontSize="1px" />}
               </button>
             </div>
