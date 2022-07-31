@@ -21,6 +21,7 @@ A Google Chrome extension made with `React` and `Tailwind CSS`.
 ## In Action 📸
 ![image](https://user-images.githubusercontent.com/48406637/181903138-72dd686e-d33d-4e10-9cd5-f68aee2e4d36.png)
 
+![image](https://user-images.githubusercontent.com/48406637/182030605-7a4d1c86-9971-480b-8c27-33a1a05da661.png)
 
 
 ## Usage
