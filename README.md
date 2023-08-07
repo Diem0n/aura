@@ -1,9 +1,5 @@
 
-<center>
 
-![logo](./public/banner.svg)
-
-</center>
 
 ## 🍀 Aura
 
@@ -69,12 +65,23 @@ Aura boasts a clean and intuitive user interface, providing a clutter-free exper
 
 
 
+## Usage
 
+### `npm start`
 
-![pepe](https://th.bing.com/th/id/R.ff5f832e40cf3ec7787d1c539bf02ce7?rik=W1CBxsg%2bM7EuEw&pid=ImgRaw&r=0)
+Runs the app in the development mode.\
+Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
- Yeah we don't have those yet 
+The page will reload when you make changes.\
+You may also see any lint errors in the console.
 
+### `npm run build`
+
+Builds the app for production to the `build` folder.\
+It correctly bundles React in production mode and optimizes the build for the best performance.
+
+The build is minified and the filenames include the hashes.\
+Your app is ready to be deployed!
 
 
 
