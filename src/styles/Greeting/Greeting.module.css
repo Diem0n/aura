@@ -1,0 +1,11 @@
+.greeting{
+    color: #FFF;
+    text-align: center;
+    font-family: Poppins;
+    font-size: 2.4rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: -0.048rem;
+    user-select: none;
+}
