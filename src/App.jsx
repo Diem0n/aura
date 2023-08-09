@@ -8,6 +8,7 @@ import night from "./assets/backgrounds/night.png";
 
 import Header from "./components/Header/Header";
 import Main from "./components/Main/Main";
+import Footer from "./components/Footer/Footer";
 
 function App() {
   useEffect(() => {
@@ -19,6 +20,7 @@ function App() {
     <div className={styles.container}>
       <Header />
       <Main />
+      <Footer />
     </div>
   );
 }

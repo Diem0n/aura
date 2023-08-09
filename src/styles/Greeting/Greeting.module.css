@@ -8,4 +8,5 @@
     line-height: normal;
     letter-spacing: -0.048rem;
     user-select: none;
+    margin-bottom: clamp( 1.5rem ,4rem, 4vw);
 }

@@ -37,7 +37,7 @@ const Header = () => {
           weather={true}
         />
         <div className={styles.weatherStats}>
-          <h2>24&deg; C</h2>
+          <h2>24&deg;</h2>
           <p>Mostly cloudy</p>
         </div>
       </div>

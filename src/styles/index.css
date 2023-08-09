@@ -6,9 +6,7 @@
   background-color: #242424;
   font-synthesis: none;
   text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-text-size-adjust: 100%;
+
 }
 
 html {
@@ -25,4 +23,27 @@ body {
   background-position: center ;
   background-repeat: no-repeat;
   background-size: cover;
+}
+
+/* utility classes */
+
+.u-center { 
+  margin:  0 auto;
+  max-width: fit-content;
+}
+
+.u-column {
+  display: flex;
+  width: fit-content;
+  flex-direction: column;
+  gap : .5rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.u-row {
+  display: flex;
+  width: fit-content;
+  align-items: center;
+  gap: .8rem;
 }

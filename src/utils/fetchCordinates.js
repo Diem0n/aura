@@ -16,6 +16,19 @@ const getCoordinates = () => {
   });
 };
 
+// error.PERMISSION_DENIED
+// "User denied the request for Geolocation."
+
+// error.POSITION_UNAVAILABLE
+// "Location information is unavailable."
+
+//  error.TIMEOUT
+// "The request to get user location timed out."
+
+//  error.UNKNOWN_ERROR
+// "An unknown error occurred."
+
+
 const fetchCoordinates = async () => {
   try {
     const coordinates = await getCoordinates();

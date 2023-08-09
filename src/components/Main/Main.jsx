@@ -1,13 +1,15 @@
 import React from "react";
 import Clock from "../Clock/Clock";
 import Greeting from "../Greeting/Greeting";
+import Goal from "../Goal/Goal";
 
 const Main = () => {
     return (
-       <>
-        <Clock />
-        <Greeting />
-       </>
+       <div>
+           <Clock />
+           <Greeting />
+           <Goal />
+       </div>
     )
 }
 
