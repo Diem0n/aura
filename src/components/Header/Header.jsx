@@ -6,7 +6,7 @@ import bookmark from "../../assets/icons/Bookmark.svg";
 import search from "../../assets/icons/Search.svg";
 
 import mostlyClouds from "../../assets/weather/mostly-clouds-day.svg";
-import { AppContext } from "../../context/AppContext";
+
 const Header = () => {
   const {weather } = useContext(AppContext);
   return (

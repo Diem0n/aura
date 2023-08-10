@@ -9,11 +9,9 @@ const Quote = () => {
     
   } , [])
   return (
-    <div className={
-      styles.container
-    }>
-      <h2 className={styles.quote}>{selectedQuote.quote}</h2>
-      <p  className={styles.author}>- {selectedQuote.author} </p>
+    <div className="u-column">
+      <h2>Quote</h2>
+      <p>Author</p>
     </div>
   );
 };
