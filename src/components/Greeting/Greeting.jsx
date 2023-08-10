@@ -1,5 +1,5 @@
 import moment from "moment";
-import React, { useState , useContext } from "react";
+import  {useContext } from "react";
 import { AppContext } from "../../context/AppContext";
 import styles from "../../styles/Greeting/Greeting.module.css";
 const Greeting = () => {
@@ -18,7 +18,7 @@ const Greeting = () => {
   };
 
   return (
-    <h1 className={styles.greeting}>
+    <h1 onClick={handleNameChange} className={styles.greeting}>
       {greeting}, {username}
     </h1>
   );

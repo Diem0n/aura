@@ -1,9 +1,10 @@
-import React from "react";
 
+import styles from '../../styles/Goal/Goal.module.css';
 const Goal = () => {
     return (
        <div className="u-center">
-        <h1 >What's your main forcus for today?</h1>
+        <h1 className={styles.label}>What is your main focus for today?</h1>
+       <input className={styles.goal}  />
        </div>
     )
 }

@@ -1,4 +1,4 @@
-import React from "react";
+
 import styles from "../../styles/Footer/Footer.module.css";
 import Quote from "../Quote/Quote";
 import Settings from "../Settings/Settings";

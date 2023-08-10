@@ -1,8 +1,14 @@
+.containerIcon {
 
+  max-height: 3rem;
+}
 .icon {
   cursor: pointer;
-  padding: .3rem;
-  }
+  object-fit: cover;
+  max-width: fit-content; 
+  padding: 0.3rem;
+
+}
 .weatherIcon {
   cursor: pointer;
   height: 6rem;
@@ -14,10 +20,10 @@
   scale: 0;
   position: absolute;
   color: rgb(255, 255, 255);
-  border-radius: .5rem;
+  border-radius: 0.5rem;
   background: #00000086;
   backdrop-filter: blur(5px);
-  padding:  .5rem 1rem;
+  padding: 0.5rem 1rem;
   transition: scale 0.2s cubic-bezier(0.075, 0.82, 0.165, 1);
 }
 

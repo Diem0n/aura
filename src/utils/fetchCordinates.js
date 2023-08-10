@@ -32,6 +32,7 @@ const getCoordinates = () => {
 const fetchCoordinates = async () => {
   try {
     const coordinates = await getCoordinates();
+    
     return coordinates;
   } catch (error) {
     console.error(error);

@@ -30,7 +30,10 @@ body {
 .u-center { 
   margin:  0 auto;
   max-width: fit-content;
+  text-align: center;
+  
 }
+
 
 .u-column {
   display: flex;
@@ -45,5 +48,13 @@ body {
   display: flex;
   width: fit-content;
   align-items: center;
+  justify-content: center;
   gap: .8rem;
+  position: relative;
+
 }
+
+.u-fill {
+  height: 100%;
+}
+

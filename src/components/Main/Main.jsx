@@ -1,4 +1,4 @@
-import React from "react";
+
 import Clock from "../Clock/Clock";
 import Greeting from "../Greeting/Greeting";
 import Goal from "../Goal/Goal";
