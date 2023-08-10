@@ -1,9 +1,11 @@
 import moment from "moment";
-import React, { useState } from "react";
+import React, { useState , useContext } from "react";
+import { AppContext } from "../../context/AppContext";
 import styles from "../../styles/Greeting/Greeting.module.css";
 const Greeting = () => {
-  const [name, setName] = useState("Xero");
+  const {username , setUserName} = useContext(AppContext);
   const currentHour = moment().hour();
+
   const greeting =
     currentHour > 6 && currentHour < 12
       ? "Good Morning"
@@ -12,12 +14,12 @@ const Greeting = () => {
       : "Good Evening";
 
   const handleNameChange = (newName) => {
-    setName(newName);
+    setUserName(newName);
   };
 
   return (
     <h1 className={styles.greeting}>
-      {greeting}, {name}
+      {greeting}, {username}
     </h1>
   );
 };
