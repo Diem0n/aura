@@ -32,6 +32,7 @@
 .weatherStats > p {
   font-size: 1.2rem;
   margin-top: -0.5rem;
+  text-transform: capitalize;
 }
 .weatherStats > h2 {
   font-size: 1.8rem;

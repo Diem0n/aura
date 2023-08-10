@@ -1,4 +1,4 @@
-import React from "react";
+import React , {useContext} from "react";
 import IconContainer from "../IconContainer/IconContainer";
 import styles from "../../styles/Header/Header.module.css";
 
@@ -7,7 +7,9 @@ import search from "../../assets/icons/Search.svg";
 
 import mostlyClouds from "../../assets/weather/mostly-clouds-day.svg";
 
+import { AppContext } from "../../context/AppContext";
 const Header = () => {
+  const {weather } = useContext(AppContext);
   return (
     <div className={styles.container}>
       <div className={styles.iconContainer}>
@@ -37,8 +39,8 @@ const Header = () => {
           weather={true}
         />
         <div className={styles.weatherStats}>
-          <h2>24&deg;</h2>
-          <p>Mostly cloudy</p>
+          <h2>{weather.temp}&deg;</h2>
+          <p>{weather.description}</p>
         </div>
       </div>
     </div>

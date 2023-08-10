@@ -1,6 +1,7 @@
 import React from "react";
 import IconContainer from "../IconContainer/IconContainer";
-import settings from '../../assets/icons/settings.svg'
+import settings from '../../assets/icons/settings.svg';
+
 const Settings = () => {
     const handlePress = () => {
         console.log('Handle Press Settings')
@@ -8,7 +9,7 @@ const Settings = () => {
     return (
        <div className="u-row" >
             <IconContainer handlePress={handlePress} icon={settings} tooltip={'settings'}/>
-            <p> Lorem, Ipsum</p>
+            {/* <p className="u-absolute"> Lorem, Ipsum</p> */}
        </div>
     )
 }
