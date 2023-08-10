@@ -1,19 +1,22 @@
 .container {
+
 }
 
-.goal,
-.label {
-  font-size: 3.2rem;
-  color: #fff;
-  font-weight: 400;
+
+.goal , .label {
+    font-size: 3.2rem;
+    color: #FFF;
+    font-weight: 400;
+    
 }
 
 .label {
+  
 }
 .goal {
-  all: unset;
-  width: 100%;
-  padding: 0.5rem 1rem;
-  font-size: 3.2rem;
-  border-bottom: 1px solid #fff;
+    all : unset;
+    width: 100%;
+    padding:.5rem  1rem;
+    font-size: 3.2rem;
+    border-bottom: 1px solid #fff;
 }

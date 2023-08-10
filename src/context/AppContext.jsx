@@ -1,5 +1,5 @@
-import  { useState, createContext , useEffect } from "react";
-import {  parseWeatherData } from "../services/getWeather";
+import React, { useState, createContext , useEffect } from "react";
+import { getWeather, parseWeatherData } from "../services/getWeather";
 
 const AppContext = createContext();
 

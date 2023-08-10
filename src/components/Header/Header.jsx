@@ -1,4 +1,4 @@
-import {useContext} from "react";
+import React , {useContext} from "react";
 import IconContainer from "../IconContainer/IconContainer";
 import styles from "../../styles/Header/Header.module.css";
 
@@ -6,6 +6,7 @@ import bookmark from "../../assets/icons/Bookmark.svg";
 import search from "../../assets/icons/Search.svg";
 
 import mostlyClouds from "../../assets/weather/mostly-clouds-day.svg";
+
 import { AppContext } from "../../context/AppContext";
 const Header = () => {
   const {weather } = useContext(AppContext);
