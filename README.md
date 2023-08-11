@@ -63,9 +63,11 @@ Aura boasts a clean and intuitive user interface, providing a clutter-free exper
 
 ## 📸 In Action 
 
-![pepe](https://th.bing.com/th/id/R.ff5f832e40cf3ec7787d1c539bf02ce7?rik=W1CBxsg%2bM7EuEw&pid=ImgRaw&r=0)
+![Alt text](image.png)
 
-`Yeah we don't have those snapshots yet` 
+<!-- ![pepe](https://th.bing.com/th/id/R.ff5f832e40cf3ec7787d1c539bf02ce7?rik=W1CBxsg%2bM7EuEw&pid=ImgRaw&r=0)
+
+`Yeah we don't have those snapshots yet`  -->
 
 ## ⚙️ Project Setup
 
