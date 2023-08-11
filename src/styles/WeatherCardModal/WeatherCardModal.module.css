@@ -1,0 +1,62 @@
+.container {
+  padding: 2rem;
+  position: absolute;
+  border-radius: 0.5rem;
+  top: 100%;
+  right: 0;
+  background: rgb(2, 0, 36);
+  background: linear-gradient(
+    90deg,
+    rgba(5, 5, 5, 0.6278886554621849) 35%,
+    rgba(0, 0, 0, 0.4990371148459384) 100%
+  );
+  transition: all 0.2s ease-out;
+  backdrop-filter: blur(15px);
+}
+
+.tempLabel {
+  color: #fff;
+  text-align: center;
+  font-family: Poppins;
+  font-size: 6.4rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+
+.weatherIcon {
+}
+
+.container::before {
+  content: "";
+  position: absolute;
+  top: -1rem;
+  right: 2rem;
+  width: 0;
+  height: 0;
+  border-left: 1rem solid transparent;
+  border-right: 1rem solid transparent;
+  border-bottom: 1rem solid #00000086;
+}
+
+.weatherStats,
+.weatherStat {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  position: relative;
+}
+
+.weatherStats {
+  width: 100%;
+  gap: 0.2rem;
+}
+
+.weatherStat {
+  cursor: pointer;
+  width: fit-content;
+}
+
+.weatherStat:hover > div > p {
+  scale: 1;
+}

@@ -13,6 +13,8 @@ const ContextProvider = ({ children }) => {
 
   const weatherDataHandler = async ()=>{
     const data = await parseWeatherData();
+    console.log('inside weather handler')
+  
     if(data){
       setWeather(data)
     }

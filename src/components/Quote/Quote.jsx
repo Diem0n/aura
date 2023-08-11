@@ -6,8 +6,8 @@ const Quote = () => {
   useEffect ( () => {
     const index = Math.floor(Math.random() * 21)
     setSelectedQuote(quotes[index]);
-    
   } , [])
+ 
   return (
     <div className={
       styles.container

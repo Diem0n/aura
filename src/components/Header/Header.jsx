@@ -1,17 +1,24 @@
-import React , {useContext} from "react";
+import React, { useContext, useState } from "react";
 import IconContainer from "../IconContainer/IconContainer";
+import WeatherCardModal from "../WeatherCardModal/WeatherCardModal";
 import styles from "../../styles/Header/Header.module.css";
 
 import bookmark from "../../assets/icons/Bookmark.svg";
 import search from "../../assets/icons/Search.svg";
 
-import mostlyClouds from "../../assets/weather/mostly-clouds-day.svg";
+import mostlyClouds from "../../assets/weather/mostly-clouds-day.png";
 
 import { AppContext } from "../../context/AppContext";
 const Header = () => {
-  const {weather } = useContext(AppContext);
+  const { weather } = useContext(AppContext);
+  const [showWeatherModal, setShowWeatherModal] = useState(true);
+  const handleWeatherCardClick = () =>{
+    setShowWeatherModal(!showWeatherModal);
+  }
+
   return (
     <div className={styles.container}>
+      {showWeatherModal && <WeatherCardModal />}
       <div className={styles.iconContainer}>
         <IconContainer
           handlePress={() => {
@@ -29,11 +36,9 @@ const Header = () => {
         />
       </div>
 
-      <div className={styles.weatherCard}>
+      <div onClick={handleWeatherCardClick} className={styles.weatherCard}>
         <IconContainer
-          handlePress={() => {
-            console.log("pressed");
-          }}
+          handlePress={handleWeatherCardClick}
           icon={mostlyClouds}
           tooltip={"weather"}
           weather={true}

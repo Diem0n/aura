@@ -10,14 +10,13 @@ import Header from "./components/Header/Header";
 import Main from "./components/Main/Main";
 import Footer from "./components/Footer/Footer";
 import { parseWeatherData } from "./services/getWeather";
-
+import { generateBackground } from "./utils/generateBackground";
 function App() {
   useEffect(() => {
-    const currentHour = moment().hour();
-    const isDayTime = currentHour > 6 && currentHour < 18 ? true : false;
-    document.body.style.backgroundImage = `url(${isDayTime ? day : night})`;
+   const url = generateBackground({day , night});
+   
+    document.body.style.background = url;
 
-    parseWeatherData()
   }, []);
   return (
     <div className={styles.container}>
