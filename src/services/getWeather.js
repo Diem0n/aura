@@ -1,5 +1,6 @@
-import { fetchCoordinates } from "../utils/fetchCordinates";
 
+import { fetchCoordinates } from "../utils/fetchCordinates";
+import { formatTime } from "../utils/formatTime";
 const getWeather = async () => {
   const { latitude, longitude } = await fetchCoordinates();
   const key = import.meta.env.VITE_WEATHERKEY;
@@ -21,7 +22,7 @@ const getWeather = async () => {
 };
 
 const parseWeatherData = async () => {
-  const data = await getWeather()
+  const data = await getWeather();
   // const data = {
   //   coord: { lon: 10.99, lat: 44.34 },
   //   weather: [
@@ -60,7 +61,10 @@ const parseWeatherData = async () => {
   const city = data.name;
   const windSpeed = data.wind.speed;
   const humidity = data.main.humidity;
+  const pressure = data.main.pressure;
   
+  const sunrise = formatTime(data.sys.sunrise);
+  const sunset = formatTime(data.sys.sunrise);
   return {
     temp,
     description,
@@ -68,6 +72,9 @@ const parseWeatherData = async () => {
     city,
     windSpeed,
     humidity,
+    pressure,
+    sunset,
+    sunrise,
   };
 };
 export { getWeather, parseWeatherData };

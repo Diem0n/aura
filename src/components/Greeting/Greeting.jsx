@@ -1,11 +1,11 @@
-import moment from "moment";
+
 import  {useContext } from "react";
 import { AppContext } from "../../context/AppContext";
 import styles from "../../styles/Greeting/Greeting.module.css";
 const Greeting = () => {
   const {username , setUserName} = useContext(AppContext);
-  const currentHour = moment().hour();
-
+  const date = new Date();
+  const currentHour = date.getHours();
   const greeting =
     currentHour > 6 && currentHour < 12
       ? "Good Morning"

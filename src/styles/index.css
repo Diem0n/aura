@@ -46,9 +46,10 @@ body {
   width: fit-content;
   align-items: center;
   justify-content: center;
-  gap: 0.8rem;
+  gap: 1.5em;
   position: relative;
-  overflow: hidden;
+  margin: 2rem;
+  
 
 }
 

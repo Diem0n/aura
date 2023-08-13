@@ -6,12 +6,12 @@ import styles from "../../styles/Header/Header.module.css";
 import bookmark from "../../assets/icons/Bookmark.svg";
 import search from "../../assets/icons/Search.svg";
 
-import mostlyClouds from "../../assets/weather/mostly-clouds-day.png";
-
+import mostlyClouds from "../../assets/weather/mostly-cloudy.svg";
+import thunderStorm from "../../assets/weather/thunderstorm.svg"
 import { AppContext } from "../../context/AppContext";
 const Header = () => {
   const { weather } = useContext(AppContext);
-  const [showWeatherModal, setShowWeatherModal] = useState(true);
+  const [showWeatherModal, setShowWeatherModal] = useState(false);
   const handleWeatherCardClick = () =>{
     setShowWeatherModal(!showWeatherModal);
   }
@@ -39,7 +39,7 @@ const Header = () => {
       <div onClick={handleWeatherCardClick} className={styles.weatherCard}>
         <IconContainer
           handlePress={handleWeatherCardClick}
-          icon={mostlyClouds}
+          icon={thunderStorm}
           tooltip={"weather"}
           weather={true}
         />

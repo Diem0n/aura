@@ -1,4 +1,4 @@
-import React, { useState, createContext , useEffect } from "react";
+import React, { useState, createContext, useEffect } from "react";
 import { getWeather, parseWeatherData } from "../services/getWeather";
 
 const AppContext = createContext();
@@ -11,18 +11,16 @@ const ContextProvider = ({ children }) => {
   });
   const [errors, setErrors] = useState([]);
 
-  const weatherDataHandler = async ()=>{
+  const weatherDataHandler = async () => {
     const data = await parseWeatherData();
-    console.log('inside weather handler')
-  
-    if(data){
-      setWeather(data)
+    if (data) {
+      setWeather(data);
     }
-  }
+  };
 
-  useEffect(()=>{
-    weatherDataHandler()
-  },[])
+  useEffect(() => {
+    weatherDataHandler();
+  }, []);
 
   return (
     <AppContext.Provider

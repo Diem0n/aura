@@ -3,14 +3,11 @@
 
 ## 🍀 Aura
 
-
 Aura is a simple and elegant momentum clone built with React, designed to help you stay focused and organized throughout your day. With Aura, you can set daily goals, track your tasks, and maintain a sense of productivity and motivation.
 All while enjoying the added advantage of accessing all the premium features of Momentum for free.
 
-
-
-
 ## 🧙🏼‍♂️ Features
+
 - `Sleek and Minimalist Design:`
 Aura boasts a clean and intuitive user interface, providing a clutter-free experience for maximum productivity.
 
@@ -37,8 +34,8 @@ Aura boasts a clean and intuitive user interface, providing a clutter-free exper
     ├── CHANGELOGS.md
     └── README.md
 
-## 🚧 Folder Structure Legends 
- 
+## 🚧 Folder Structure Legends
+
 `src:` The main source code directory.
 
 `components:` reusable UI components.
@@ -49,7 +46,7 @@ Aura boasts a clean and intuitive user interface, providing a clutter-free exper
 
 `services:`  service modules, which encapsulates logic for interacting with external APIs.
 
-`styles: ` style-related utilities.
+`styles:` style-related utilities.
 
 `App.jsx:` The main entry point of the application.
 
@@ -61,7 +58,7 @@ Aura boasts a clean and intuitive user interface, providing a clutter-free exper
 
 `readme.md:` information and instructions about the project.
 
-## 📸 In Action 
+## 📸 In Action
 
 ![Alt text](image.png)
 
@@ -74,18 +71,19 @@ Aura boasts a clean and intuitive user interface, providing a clutter-free exper
 ### 📦 Prerequisites
 
 To run this project, you will need to have the following on your machine:
-- openweather current weather api key 
+
+- openweather current weather api key
 - yarn or npm
 
 ### 🚀 Quick start
 
-1.  **Clone the repository**
+1. **Clone the repository**
 
     ```js
     git clone https://github.com/Diem0n/aura
     ```
 
-1.  **Install the dependencies with yarn or npm**
+1. **Install the dependencies with yarn or npm**
 
     ```js
     yarn
@@ -95,13 +93,14 @@ To run this project, you will need to have the following on your machine:
     npm
     ```
 
-1.  **Start developing**
+1. **Start developing**
 
     Run the development server.
 
     ```js
     yarn dev 
     ```
+
     ```js
     npm dev 
     ```

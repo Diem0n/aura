@@ -35,7 +35,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["eslint-plugin-react", "virtual:02935f34ea92d36c6935c4095f0da5860ff3643530084c952100c8080c1f51d294c65fc3a422d804593c6f1bf02823ae8d77a09ed6f1e8d731bd6f19ad7cd8f4#npm:7.33.1"],\
             ["eslint-plugin-react-hooks", "virtual:02935f34ea92d36c6935c4095f0da5860ff3643530084c952100c8080c1f51d294c65fc3a422d804593c6f1bf02823ae8d77a09ed6f1e8d731bd6f19ad7cd8f4#npm:4.6.0"],\
             ["eslint-plugin-react-refresh", "virtual:02935f34ea92d36c6935c4095f0da5860ff3643530084c952100c8080c1f51d294c65fc3a422d804593c6f1bf02823ae8d77a09ed6f1e8d731bd6f19ad7cd8f4#npm:0.4.3"],\
-            ["moment", "npm:2.29.4"],\
             ["react", "npm:18.2.0"],\
             ["react-dom", "virtual:02935f34ea92d36c6935c4095f0da5860ff3643530084c952100c8080c1f51d294c65fc3a422d804593c6f1bf02823ae8d77a09ed6f1e8d731bd6f19ad7cd8f4#npm:18.2.0"],\
             ["vite", "virtual:02935f34ea92d36c6935c4095f0da5860ff3643530084c952100c8080c1f51d294c65fc3a422d804593c6f1bf02823ae8d77a09ed6f1e8d731bd6f19ad7cd8f4#npm:4.4.7"]\
@@ -1133,7 +1132,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["eslint-plugin-react", "virtual:02935f34ea92d36c6935c4095f0da5860ff3643530084c952100c8080c1f51d294c65fc3a422d804593c6f1bf02823ae8d77a09ed6f1e8d731bd6f19ad7cd8f4#npm:7.33.1"],\
             ["eslint-plugin-react-hooks", "virtual:02935f34ea92d36c6935c4095f0da5860ff3643530084c952100c8080c1f51d294c65fc3a422d804593c6f1bf02823ae8d77a09ed6f1e8d731bd6f19ad7cd8f4#npm:4.6.0"],\
             ["eslint-plugin-react-refresh", "virtual:02935f34ea92d36c6935c4095f0da5860ff3643530084c952100c8080c1f51d294c65fc3a422d804593c6f1bf02823ae8d77a09ed6f1e8d731bd6f19ad7cd8f4#npm:0.4.3"],\
-            ["moment", "npm:2.29.4"],\
             ["react", "npm:18.2.0"],\
             ["react-dom", "virtual:02935f34ea92d36c6935c4095f0da5860ff3643530084c952100c8080c1f51d294c65fc3a422d804593c6f1bf02823ae8d77a09ed6f1e8d731bd6f19ad7cd8f4#npm:18.2.0"],\
             ["vite", "virtual:02935f34ea92d36c6935c4095f0da5860ff3643530084c952100c8080c1f51d294c65fc3a422d804593c6f1bf02823ae8d77a09ed6f1e8d731bd6f19ad7cd8f4#npm:4.4.7"]\
@@ -2870,15 +2868,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/mkdirp-npm-1.0.4-37f6ef56b9-a96865108c.zip/node_modules/mkdirp/",\
           "packageDependencies": [\
             ["mkdirp", "npm:1.0.4"]\
-          ],\
-          "linkType": "HARD"\
-        }]\
-      ]],\
-      ["moment", [\
-        ["npm:2.29.4", {\
-          "packageLocation": "./.yarn/cache/moment-npm-2.29.4-902943305d-0ec3f9c2bc.zip/node_modules/moment/",\
-          "packageDependencies": [\
-            ["moment", "npm:2.29.4"]\
           ],\
           "linkType": "HARD"\
         }]\

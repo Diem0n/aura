@@ -1,4 +1,4 @@
-import moment from "moment";
+
 import {  useEffect } from "react";
 
 import styles from "./styles/App.module.css";
@@ -14,7 +14,6 @@ import { generateBackground } from "./utils/generateBackground";
 function App() {
   useEffect(() => {
    const url = generateBackground({day , night});
-   
     document.body.style.background = url;
 
   }, []);
