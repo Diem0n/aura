@@ -1,4 +1,12 @@
 .greeting{
+    user-select: none;
+    display: flex;
+    margin: 0 auto;
+    margin-bottom: clamp( 1.5rem ,4rem, 4vw);
+    width: fit-content;
+}
+
+.greeting > h1 {
     color: #FFF;
     text-align: center;
     font-family: Poppins;
@@ -7,6 +15,5 @@
     font-weight: 400;
     line-height: normal;
     letter-spacing: -0.048rem;
-    user-select: none;
-    margin-bottom: clamp( 1.5rem ,4rem, 4vw);
+ 
 }

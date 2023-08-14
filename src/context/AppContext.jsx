@@ -10,7 +10,7 @@ const ContextProvider = ({ children }) => {
     description: "N/A",
   });
   const [errors, setErrors] = useState([]);
-
+  const [toggleOverlay, setToggleOverlay] = useState(false);
   const weatherDataHandler = async () => {
     const data = await parseWeatherData();
     if (data) {
@@ -24,7 +24,16 @@ const ContextProvider = ({ children }) => {
 
   return (
     <AppContext.Provider
-      value={{ username, setUserName, errors, setErrors, weather, setWeather }}
+      value={{
+        username,
+        setUserName,
+        errors,
+        setErrors,
+        weather,
+        setWeather,
+        toggleOverlay,
+        setToggleOverlay,
+      }}
     >
       {children}
     </AppContext.Provider>

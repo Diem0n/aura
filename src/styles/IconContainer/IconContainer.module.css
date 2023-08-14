@@ -1,6 +1,7 @@
 .containerIcon {
   max-height: 3rem;
   
+
 }
 .containerWeather {
   height: 100%;
@@ -9,10 +10,8 @@
 }
 .icon {
   cursor: pointer;
-  object-fit: cover;
-  max-width: fit-content; 
   padding: 0.3rem;
-
+  max-width: 2.5rem;
   
 }
 .weatherIcon {

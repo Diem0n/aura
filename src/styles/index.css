@@ -19,9 +19,9 @@ html {
 }
 
 body {
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
+  background-position: center !important;
+  background-repeat: no-repeat !important ;
+  background-size: cover !important;
 }
 
 /* utility classes */
@@ -52,7 +52,20 @@ body {
   
 
 }
+.u-overlay,
+.u-overlayActive{
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 11;
+  background-color: #24242404;
+  width: 100dvw;
+  height: 100dvh;
 
-.u-fill {
-  
+}
+.u-overlayActive {
+  display: block;
+}
+.u-overlay{
+  display: none;
 }

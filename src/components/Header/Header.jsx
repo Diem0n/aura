@@ -4,11 +4,12 @@ import WeatherCardModal from "../WeatherCardModal/WeatherCardModal";
 import styles from "../../styles/Header/Header.module.css";
 
 import bookmark from "../../assets/icons/Bookmark.svg";
-import search from "../../assets/icons/Search.svg";
 
-import mostlyClouds from "../../assets/weather/mostly-cloudy.svg";
+
+
 import thunderStorm from "../../assets/weather/thunderstorm.svg"
 import { AppContext } from "../../context/AppContext";
+import Search from "../Search/Search";
 const Header = () => {
   const { weather } = useContext(AppContext);
   const [showWeatherModal, setShowWeatherModal] = useState(false);
@@ -27,13 +28,8 @@ const Header = () => {
           icon={bookmark}
           tooltip={"Bookmarks"}
         />
-        <IconContainer
-          handlePress={() => {
-            console.log("pressed");
-          }}
-          icon={search}
-          tooltip={"Search"}
-        />
+        <Search />
+      
       </div>
 
       <div onClick={handleWeatherCardClick} className={styles.weatherCard}>

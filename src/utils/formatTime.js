@@ -1,5 +1,5 @@
 const formatTime = (str) => {
-  const date = new Date(str * 1000)
+  const date = new Date(parseInt(str) * 1000  )
   const hours = date.getHours();
   const minutes = date.getMinutes();
   const ampm = hours >= 12 ? "PM" : "AM";

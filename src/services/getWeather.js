@@ -64,7 +64,7 @@ const parseWeatherData = async () => {
   const pressure = data.main.pressure;
   
   const sunrise = formatTime(data.sys.sunrise);
-  const sunset = formatTime(data.sys.sunrise);
+  const sunset = formatTime(data.sys.sunset);
   return {
     temp,
     description,
