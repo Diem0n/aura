@@ -1,7 +1,7 @@
 import { useState, useContext, useEffect, useRef } from "react";
-
+import { AppContext } from "../../context/AppContext";
+import { IconContainer } from "../index";
 import search from "../../assets/icons/search.svg";
-
 import bing from "../../assets/icons/bing.svg";
 import bingActive from "../../assets/icons/bing-active.svg";
 import google from "../../assets/icons/google.svg";
@@ -9,9 +9,8 @@ import googleActive from "../../assets/icons/google-active.svg";
 import duckduckgo from "../../assets/icons/duckduckgo.svg";
 import duckduckgoActive from "../../assets/icons/duckduckgo-active.svg";
 import chevron from "../../assets/icons/chevron.svg";
-import IconContainer from "../IconContainer/IconContainer";
+
 import styles from "../../styles/Search/Search.module.css";
-import { AppContext } from "../../context/AppContext";
 
 const Search = () => {
   const searchEngines = [

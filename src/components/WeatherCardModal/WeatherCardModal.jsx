@@ -11,7 +11,7 @@ import pressure from "../../assets/icons/pressure.svg";
 import sunset from "../../assets/icons/sunset.svg";
 import sunrise from "../../assets/icons/sunrise.svg";
 
-import IconContainer from "../IconContainer/IconContainer";
+import { IconContainer } from "../index";
 
 const WeatherCardModal = () => {
   const { weather } = useContext(AppContext);

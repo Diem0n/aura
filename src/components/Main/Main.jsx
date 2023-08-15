@@ -1,15 +1,12 @@
 
-import Clock from "../Clock/Clock";
-import Greeting from "../Greeting/Greeting";
-import Goal from "../Goal/Goal";
-
+import {Clock , Greeting , Goal} from '../index'
 const Main = () => {
     return (
-       <div>
+       <main>
            <Clock />
            <Greeting />
            <Goal />
-       </div>
+       </main>
     )
 }
 

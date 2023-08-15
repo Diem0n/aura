@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import  { useEffect, useState } from "react";
 import { quotes } from "../../constants";
 import styles from '../../styles/Quote/Quote.module.css';
 const Quote = () => {

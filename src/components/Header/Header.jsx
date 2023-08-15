@@ -1,21 +1,18 @@
-import React, { useContext, useState } from "react";
-import IconContainer from "../IconContainer/IconContainer";
-import WeatherCardModal from "../WeatherCardModal/WeatherCardModal";
-import styles from "../../styles/Header/Header.module.css";
+import { useContext, useState } from "react";
+import { AppContext } from "../../context/AppContext";
+import { Search, IconContainer, WeatherCardModal } from "../index";
 
 import bookmark from "../../assets/icons/Bookmark.svg";
+import thunderStorm from "../../assets/weather/thunderstorm.svg";
 
+import styles from "../../styles/Header/Header.module.css";
 
-
-import thunderStorm from "../../assets/weather/thunderstorm.svg"
-import { AppContext } from "../../context/AppContext";
-import Search from "../Search/Search";
 const Header = () => {
   const { weather } = useContext(AppContext);
   const [showWeatherModal, setShowWeatherModal] = useState(false);
-  const handleWeatherCardClick = () =>{
+  const handleWeatherCardClick = () => {
     setShowWeatherModal(!showWeatherModal);
-  }
+  };
 
   return (
     <div className={styles.container}>
@@ -29,7 +26,6 @@ const Header = () => {
           tooltip={"Bookmarks"}
         />
         <Search />
-      
       </div>
 
       <div onClick={handleWeatherCardClick} className={styles.weatherCard}>
@@ -40,8 +36,8 @@ const Header = () => {
           weather={true}
         />
         <div className={styles.weatherStats}>
-          <h2>{weather.temp}&deg;</h2>
-          <p>{weather.description}</p>
+          <h2>{weather?.temp}&deg;</h2>
+          <p>{weather?.description}</p>
         </div>
       </div>
     </div>
