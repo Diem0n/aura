@@ -88,7 +88,7 @@ const Search = () => {
           }
         >
           <div className={styles.contentWrapper}>
-            <IconContainer icon={searchEngine.icon} />
+            <IconContainer alt={searchEngine.label} icon={searchEngine.icon} />
             <p> {searchEngine.label}</p>
           </div>
         </button>
@@ -104,6 +104,7 @@ const Search = () => {
         }}
         icon={search}
         tooltip={"Search"}
+        alt={"Search"}
       />
       <input
         className={styles.searchBar}
@@ -114,9 +115,9 @@ const Search = () => {
       />
       <div className={styles.dropdownContainer}>
         <div className={styles.selectedItem} onClick={handleDropdownToggle}>
-          <IconContainer icon={selectedItem?.active} />
+          <IconContainer alt={selectedItem.label} icon={selectedItem?.active} />
           <div className={styles.dropdownIcon}>
-            <IconContainer icon={chevron} />
+            <IconContainer alt={"Dropdown Icon"} icon={chevron} />
           </div>
         </div>
         <div

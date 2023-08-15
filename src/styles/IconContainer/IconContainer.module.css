@@ -1,7 +1,7 @@
 .containerIcon {
   max-height: 3rem;
-  
-
+  position: relative;
+  padding: 0.5rem;
 }
 .containerWeather {
   height: 100%;
@@ -12,19 +12,19 @@
   cursor: pointer;
   padding: 0.3rem;
   max-width: 2.5rem;
-  
 }
 .weatherIcon {
   cursor: pointer;
   width: 100%;
   max-height: 3rem;
-  margin-right: .5rem;
+  margin-right: 0.5rem;
 }
 
 .tooltip {
   margin-top: 0.5rem;
   scale: 0;
   position: absolute;
+
   color: rgb(255, 255, 255);
   border-radius: 0.5rem;
   background: #00000086;
@@ -32,13 +32,12 @@
   padding: 0.5rem 1rem;
   transition: scale 0.2s cubic-bezier(0.075, 0.82, 0.165, 1);
   visibility: hidden;
-  
 }
 
 .tooltip::before {
   content: "";
   position: absolute;
-  top: -.5rem;
+  top: -0.5rem;
   width: 0;
   height: 0;
   border-left: 5px solid transparent;
@@ -48,18 +47,18 @@
 
 .icon:hover ~ .tooltip {
   scale: 1;
-  animation: bounce 0.3s  forwards ;
+  animation: bounce 0.3s forwards;
   visibility: visible;
 }
 
 @keyframes bounce {
-  0%{
+  0% {
     scale: 0;
   }
   50% {
-    scale: 1.2;
+    scale: 1.1;
   }
-  100%{
+  100% {
     scale: 1;
   }
 }

@@ -8,55 +8,19 @@ All while enjoying the added advantage of accessing all the premium features of 
 
 ## 🧙🏼‍♂️ Features
 
-- `Sleek and Minimalist Design:`
-Aura boasts a clean and intuitive user interface, providing a clutter-free experience for maximum productivity.
+`🌌 Chronicles of Versions:` Witness the evolution of Aura's magic with each enchanting version.
 
-- `Task Management:` Create, update, and mark tasks as complete to stay on top of your to-do list.
+`🔮 Customization Spell:` Weave your own design enchantment with customizable elements and settings, aligning Aura with your essence.
 
-- `Daily Goals:` Set daily goals and watch your progress as you accomplish them throughout the day.
+`✨ Affirmation Charms:` Immerse yourself in motivational mantras that empower your day and illuminate your path.
 
-- `Customizable Settings:` Tailor Aura to fit your preferences with customizable settings for themes and notifications.
+`📚 Sorcery of Knowledge:` Harness the search bar's magic to summon information from various realms of the internet.
 
-## 📂 Folder Structure
+`📝 Task Enchantment:` Embark on a quest of productivity with the to-do feature, your loyal companion.
 
-    .
-    ├── src 
-    │   ├── assets
-    │   ├── components
-    │   ├── context
-    |   |── services
-    |   |── styles
-    │   └── utils
-    ├── App.jsx
-    ├── .env
-    ├── LICENSE
-    ├── package.json
-    ├── CHANGELOGS.md
-    └── README.md
+`💖 Favored Elements:` Keep your cherished features close, favored with a touch of magical allure.
 
-## 🚧 Folder Structure Legends
-
-`src:` The main source code directory.
-
-`components:` reusable UI components.
-
-`context:`  application context and state.
-
-`assets:` static resources such as images, icons.
-
-`services:`  service modules, which encapsulates logic for interacting with external APIs.
-
-`styles:` style-related utilities.
-
-`App.jsx:` The main entry point of the application.
-
-`LICENSE:` The license file for the project.
-
-`package.json:`  metadata and dependencies for the project.
-
-`changelog.md:` information about previous versions of the project.
-
-`readme.md:` information and instructions about the project.
+`🌅 Wisdom Scrolls:`Engage with custom quotes that stir wisdom and reflection in your magical journey.
 
 ## 📸 In Action
 
@@ -72,7 +36,7 @@ Aura boasts a clean and intuitive user interface, providing a clutter-free exper
 
 To run this project, you will need to have the following on your machine:
 
-- openweather current weather api key
+- openweather current weather api key (optional feature can be turned off)
 - yarn or npm
 
 ### 🚀 Quick start
@@ -104,4 +68,21 @@ To run this project, you will need to have the following on your machine:
     ```js
     npm dev 
     ```
+
+
+## 📜 Version Chronicles
+
+Explore the magical progression of Aura's versions:
+
+`v1.0 - The Awakening:` The dawn of Aura's magic, laying the groundwork for its journey.
+
+`v2.0 - The Evolution:` Enhanced components and layout, enhancing the user's magical experience.
+
+`v3.0 - The Ascension:` Transcend to new heights as Aura unlocks premium features, invoking inspiration.
+
+View the compelete [🌌 Chronicals](./CHANGELOG.md) details
+
+## ✨ Contribution
+
+Be a part of Aura's enchanting growth [View Contribution Guide](./CONTRIBUTION.MD). Forge your own magical path by forking the repository, casting your spells, and opening a pull request. Together, we'll elevate Aura's charm.
 

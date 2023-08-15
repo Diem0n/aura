@@ -10,6 +10,7 @@ const Settings = () => {
         handlePress={handlePress}
         icon={settings}
         tooltip={"settings"}
+        alt={"Todo"}
       />
       {/* <p className="u-absolute"> Lorem, Ipsum</p> */}
     </div>

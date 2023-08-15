@@ -15,7 +15,7 @@ const Header = () => {
   };
 
   return (
-    <div className={styles.container}>
+    <header className={styles.container}>
       {showWeatherModal && <WeatherCardModal />}
       <div className={styles.iconContainer}>
         <IconContainer
@@ -24,6 +24,7 @@ const Header = () => {
           }}
           icon={bookmark}
           tooltip={"Bookmarks"}
+          alt={"Bookmarks"}
         />
         <Search />
       </div>
@@ -34,13 +35,14 @@ const Header = () => {
           icon={thunderStorm}
           tooltip={"weather"}
           weather={true}
+          alt={"weather"}
         />
         <div className={styles.weatherStats}>
           <h2>{weather?.temp}&deg;</h2>
           <p>{weather?.description}</p>
         </div>
       </div>
-    </div>
+    </header>
   );
 };
 

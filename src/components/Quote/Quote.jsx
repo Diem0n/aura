@@ -4,6 +4,7 @@ import styles from '../../styles/Quote/Quote.module.css';
 const Quote = () => {
   const [selectedQuote , setSelectedQuote] = useState({});
   useEffect ( () => {
+    // https://api.quotable.io/random
     const index = Math.floor(Math.random() * 21)
     setSelectedQuote(quotes[index]);
   } , [])
