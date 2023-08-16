@@ -23,6 +23,13 @@ const Search = () => {
     } else {
       setSelectedItem(searchEngines[0]);
     }
+
+    // cleanup 
+    return (()=>{
+  
+      setToggleDropdown(false)
+      setToggleSearch(false)
+    })
   }, []);
 
   // handlers
@@ -70,7 +77,6 @@ const Search = () => {
         searcBarRef.current.value === "" &&
         searcBarRef.current !== document.activeElement
       ) {
-        
         setToggleSearch(false);
       }
     }
@@ -86,9 +92,9 @@ const Search = () => {
 
   const handleSearch = (event) => {
     if (event.key === "Enter") {
-      const encodedQuery = encodeURI(searcBarRef.current.value);
-      searcBarRef.current.value = "";
-      window.open(selectedItem.query + encodedQuery, "_self");
+      const inputValue = searcBarRef.current.value;
+      const encodedQuery = encodeURI(inputValue);
+      window.open(selectedItem.query + encodedQuery , "_self");
     }
   };
 
@@ -128,6 +134,9 @@ const Search = () => {
         className={styles.searchBar}
         onChange={handleInputChange}
         onClick={() => {
+          if(toggleDropdown){
+            setToggleDropdown(false)
+          }
           if (!toggleSearch) {
             setToggleSearch(true);
           }
@@ -139,7 +148,9 @@ const Search = () => {
         }}
         placeholder="what are you looking for?"
         type="text"
+        
         onKeyDown={handleSearch}
+        
         ref={searcBarRef}
       />
       <div className={styles.dropdownContainer}>
