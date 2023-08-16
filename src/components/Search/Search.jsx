@@ -4,6 +4,7 @@ import { searchEngines } from "../../constants";
 import { fetchUserData } from "../../utils/fetchUserData";
 import { storeUserData } from "../../utils/storeUserData";
 
+
 import search from "../../assets/icons/search.svg";
 import chevron from "../../assets/icons/chevron.svg";
 import styles from "../../styles/Search/Search.module.css";
@@ -12,6 +13,7 @@ const Search = () => {
   const [toggleDropdown, setToggleDropdown] = useState(false);
   const [toggleSearch, setToggleSearch] = useState(false);
   const [selectedItem, setSelectedItem] = useState({});
+  
   const searcBarRef = useRef();
 
   useEffect(() => {
@@ -30,6 +32,13 @@ const Search = () => {
     );
     setSelectedItem(engine);
     storeUserData({ key: "sengine", data: engine });
+    storeUserData({ key: "sengine", data: engine });
+  };
+
+  const handleToggleSearch = () => {
+    setToggleSearch((prev) => {
+      return !prev;
+    });
   };
 
   const handleDropdownToggle = () => {
@@ -63,6 +72,14 @@ const Search = () => {
       }
     }
   };
+
+
+  const handleFocusChange = (event)=>{
+    if (event.currentTarget === event.target && toggleSearch === false) {
+      setToggleSearch(true)
+ }
+  }
+
 
   const handleSearch = (event) => {
     if (event.key === "Enter") {
