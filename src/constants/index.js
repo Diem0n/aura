@@ -1,3 +1,10 @@
+import bing from "../assets/icons/bing.svg";
+import bingActive from "../assets/icons/bing-active.svg";
+import google from "../assets/icons/google.svg";
+import googleActive from "../assets/icons/google-active.svg";
+import duckduckgo from "../assets/icons/duckduckgo.svg";
+import duckduckgoActive from "../assets/icons/duckduckgo-active.svg";
+
 const quotes = [
   {
     author: "Steve Jobs",
@@ -94,4 +101,28 @@ const quotes = [
   },
 ];
 
-export { quotes };
+const searchEngines = [
+  {
+    id: "se1",
+    label: "Bing",
+    icon: bing,
+    active: bingActive,
+    query: "https://www.bing.com/search?q=",
+  },
+  {
+    id: "se2",
+    label: "Google",
+    icon: google,
+    active: googleActive,
+    query: "https://www.google.com/search?q=",
+  },
+  {
+    id: "se3",
+    label: "DuckDuck Go",
+    icon: duckduckgo,
+    active: duckduckgoActive,
+    query: "https://duckduckgo.com/?q=",
+  },
+];
+
+export { quotes , searchEngines };

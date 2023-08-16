@@ -1,51 +1,27 @@
-import { useState, useContext, useEffect, useRef } from "react";
-import { AppContext } from "../../context/AppContext";
+import { useState, useEffect, useRef } from "react";
 import { IconContainer } from "../index";
-import search from "../../assets/icons/search.svg";
-import bing from "../../assets/icons/bing.svg";
-import bingActive from "../../assets/icons/bing-active.svg";
-import google from "../../assets/icons/google.svg";
-import googleActive from "../../assets/icons/google-active.svg";
-import duckduckgo from "../../assets/icons/duckduckgo.svg";
-import duckduckgoActive from "../../assets/icons/duckduckgo-active.svg";
-import chevron from "../../assets/icons/chevron.svg";
+import { searchEngines } from "../../constants";
+import { fetchUserData } from "../../utils/fetchUserData";
+import { storeUserData } from "../../utils/storeUserData";
 
+import search from "../../assets/icons/search.svg";
+import chevron from "../../assets/icons/chevron.svg";
 import styles from "../../styles/Search/Search.module.css";
 
 const Search = () => {
-  const searchEngines = [
-    {
-      id: "se1",
-      label: "Bing",
-      icon: bing,
-      active: bingActive,
-      query: "https://www.bing.com/search?q=",
-    },
-    {
-      id: "se2",
-      label: "Google",
-      icon: google,
-      active: googleActive,
-      query: "https://www.google.com/search?q=",
-    },
-    {
-      id: "se3",
-      label: "DuckDuck Go",
-      icon: duckduckgo,
-      active: duckduckgoActive,
-      query: "https://duckduckgo.com/?q=",
-    },
-  ];
-  const [selectedItem, setSelectedItem] = useState(searchEngines[0]);
   const [toggleDropdown, setToggleDropdown] = useState(false);
-  const { toggleOverlay, setToggleOverlay } = useContext(AppContext);
+  const [toggleSearch, setToggleSearch] = useState(false);
+  const [selectedItem, setSelectedItem] = useState({});
   const searcBarRef = useRef();
 
   useEffect(() => {
-    if (!toggleOverlay && toggleDropdown === true) {
-      setToggleDropdown(false);
+    const preference = fetchUserData("sengine");
+    if (preference !== null) {
+      setSelectedItem(preference);
+    } else {
+      setSelectedItem(searchEngines[0]);
     }
-  }, [toggleOverlay]);
+  }, []);
 
   // handlers
   const handleSelectEngine = (key) => {
@@ -53,17 +29,39 @@ const Search = () => {
       (searchEngine) => searchEngine.id === key
     );
     setSelectedItem(engine);
+    storeUserData({ key: "sengine", data: engine });
   };
 
   const handleDropdownToggle = () => {
     setToggleDropdown((prev) => {
-      if (prev === false) {
-        setToggleOverlay(true);
-      } else {
-        setToggleOverlay(false);
-      }
       return !prev;
     });
+    if (!toggleSearch) {
+      setToggleSearch(true);
+    }
+  };
+
+  const handleInputChange = () => {
+    if (searcBarRef.current.value !== "" && toggleSearch === false) {
+      console.log(searcBarRef);
+      setToggleSearch(true);
+    }
+    if (searcBarRef.onFocus && toggleSearch === false) {
+    }
+  };
+
+  const handleMouseLeave = () => {
+    if (toggleDropdown) {
+      return;
+    }
+    if (toggleSearch) {
+      if (
+        searcBarRef.current.value === "" &&
+        searcBarRef.current !== document.activeElement
+      ) {
+        setToggleSearch(false);
+      }
+    }
   };
 
   const handleSearch = (event) => {
@@ -76,20 +74,20 @@ const Search = () => {
 
   //render lists
   const renderSearchEngines = () => {
-    return searchEngines.map((searchEngine) => {
+    return searchEngines.map((engine) => {
       return (
         <button
-          onClick={() => handleSelectEngine(searchEngine.id)}
-          key={searchEngine.id}
+          onClick={() => handleSelectEngine(engine?.id)}
+          key={engine?.id}
           className={
-            selectedItem.id !== searchEngine.id
+            engine?.id !== selectedItem?.id
               ? styles.dropdownItem
               : styles.dropdownItemActive
           }
         >
           <div className={styles.contentWrapper}>
-            <IconContainer alt={searchEngine.label} icon={searchEngine.icon} />
-            <p> {searchEngine.label}</p>
+            <IconContainer alt={engine?.label} icon={engine?.icon} />
+            <p> {engine?.label}</p>
           </div>
         </button>
       );
@@ -97,17 +95,28 @@ const Search = () => {
   };
 
   return (
-    <div className={styles.container_searchbar}>
-      <IconContainer
-        handlePress={() => {
-          console.log("pressed");
-        }}
-        icon={search}
-        tooltip={"Search"}
-        alt={"Search"}
-      />
+    <div
+      onMouseLeave={handleMouseLeave}
+      className={
+        toggleSearch
+          ? styles.containerSearchBarActive
+          : styles.containerSearchBar
+      }
+    >
+      <IconContainer icon={search} tooltip={"Search"} alt={"Search"} />
       <input
         className={styles.searchBar}
+        onChange={handleInputChange}
+        onClick={() => {
+          if (!toggleSearch) {
+            setToggleSearch(true);
+          }
+        }}
+        onBlur={() => {
+          if (toggleSearch && searcBarRef.current.value === "") {
+            setToggleSearch(false);
+          }
+        }}
         placeholder="what are you looking for?"
         type="text"
         onKeyDown={handleSearch}
@@ -115,7 +124,10 @@ const Search = () => {
       />
       <div className={styles.dropdownContainer}>
         <div className={styles.selectedItem} onClick={handleDropdownToggle}>
-          <IconContainer alt={selectedItem.label} icon={selectedItem?.active} />
+          <IconContainer
+            alt={selectedItem?.label}
+            icon={selectedItem?.active}
+          />
           <div className={styles.dropdownIcon}>
             <IconContainer alt={"Dropdown Icon"} icon={chevron} />
           </div>

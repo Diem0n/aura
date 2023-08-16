@@ -1,14 +1,28 @@
-.container_searchbar {
+.containerSearchBar,
+.containerSearchBarActive {
   display: flex;
   align-items: center;
-  gap: 1rem;
-  border-bottom: 1px solid #fff;
+  max-width: auto;
+  position: relative;
+  justify-content: left;
 }
+
+.containerSearchBar::after,
+.containerSearchBarActive::after {
+  content: "";
+  position: absolute;
+  height: 1px;
+  bottom: 0;
+  transition: width 0.2s ease-in-out;
+}
+
 .searchBar {
   all: unset;
   padding: 0.5rem 0.2rem 0.5rem 0.2rem;
-  font-size: 1.4rem;
+  font-size: 1.2rem;
+  transition: all 0.1s ease-in;
   width: fit-content;
+  display: none;
 }
 
 .searchBar::placeholder {
@@ -18,16 +32,22 @@
 .dropdownContainer {
   width: fit-content;
   padding: 1rem;
-  display: flex;
+  display: none;
   flex-direction: column;
   position: relative;
   z-index: 100;
+  opacity: 100% !important;
 }
 
 .selectedItem {
   display: flex;
   align-items: center;
 }
+
+.selectedItem > div:last-child {
+  margin-left: -1rem;
+}
+
 .dropdownItems,
 .dropdownItemsActive {
   display: flex;
@@ -104,4 +124,33 @@
 
 .dropdownIconActive {
   transform: rotate(180deg);
+}
+
+.containerSearchBar:hover > .searchBar {
+  display: block !important;
+}
+
+.containerSearchBarActive > .searchBar {
+  display: flex;
+}
+
+.containerSearchBar::after {
+  width: 0%;
+  background-color: #ffffffc7;
+}
+
+.containerSearchBar:hover > .dropdownContainer {
+  display: flex;
+} 
+.containerSearchBarActive > .dropdownContainer {
+  display: flex;
+}
+.containerSearchBarActive::after {
+  width: 95%;
+  background-color: #ffffffc7;
+}
+
+.containerSearchBar:hover::after {
+  left: 0;
+  width: 95%;
 }
