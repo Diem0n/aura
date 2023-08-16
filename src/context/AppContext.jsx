@@ -8,10 +8,6 @@ const ContextProvider = ({ children }) => {
   const [weather, setWeather] = useState(null);
   const [errors, setErrors] = useState([]);
   const [toggleOverlay, setToggleOverlay] = useState(false);
-  const [searchEngine, setSearchEngine] = useState(
-    localStorage.getItem("sengine")
-  );
-
   const getExpireTime = () => {
     const hours = new Date().getHours();
     const hoursRemaining = 24 - hours;
@@ -43,10 +39,6 @@ const ContextProvider = ({ children }) => {
     weatherDataHandler();
   }, []);
 
-  useEffect(() => {
-    localStorage.setItem("sengine", searchEngine);
-  }, [searchEngine]);
-
   return (
     <AppContext.Provider
       value={{
@@ -58,8 +50,6 @@ const ContextProvider = ({ children }) => {
         setWeather,
         toggleOverlay,
         setToggleOverlay,
-        searchEngine,
-        setSearchEngine
       }}
     >
       {children}

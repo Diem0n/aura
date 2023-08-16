@@ -7,11 +7,11 @@ const IconContainer = ({ handlePress, tooltip, icon, weather = false , alt}) => 
       onClick={handlePress}
     >
       <img alt={alt} className={weather ? styles.weatherIcon : styles.icon} src={icon} />
-      {tooltip && (
+      {/* {tooltip && (
         <p id="tooltip" className={styles.tooltip}>
           {tooltip}
         </p>
-      )}
+      )} */}
     </div>
   );
 };
