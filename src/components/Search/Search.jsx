@@ -60,7 +60,9 @@ const Search = () => {
   };
 
   const handleMouseLeave = () => {
+
     if (toggleDropdown) {
+      
       return;
     }
     if (toggleSearch) {
@@ -68,6 +70,7 @@ const Search = () => {
         searcBarRef.current.value === "" &&
         searcBarRef.current !== document.activeElement
       ) {
+        
         setToggleSearch(false);
       }
     }
