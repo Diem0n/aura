@@ -3,28 +3,27 @@
 
 ## 🍀 Aura
 
-Aura is a simple and elegant momentum clone built with React, designed to help you stay focused and organized throughout your day. With Aura, you can set daily goals, track your tasks, and maintain a sense of productivity and motivation.
-All while enjoying the added advantage of accessing all the premium features of Momentum for free.
+Presenting Aura, a React-based rendition inspired by Momentum. Created to provide simplicity and elegance, Aura enhances focus and organization in your daily life. From managing daily goals to tracking tasks, Aura ensures your productivity journey while offering the premium features of Momentum, free of charge.
 
 ## 🧙🏼‍♂️ Features
 
-`🌌 Chronicles of Versions:` Witness the evolution of Aura's magic with each enchanting version.
+`🌌 Version History:` Explore Aura's evolution through different versions.
 
-`🔮 Customization Spell:` Weave your own design enchantment with customizable elements and settings, aligning Aura with your essence.
+`🎨 Customization:` Personalize Aura's appearance to match your style.
 
-`✨ Affirmation Charms:` Immerse yourself in motivational mantras that empower your day and illuminate your path.
+`✨ Affirmations:` Access motivational mantras to uplift your day.
 
-`📚 Sorcery of Knowledge:` Harness the search bar's magic to summon information from various realms of the internet.
+`🔍 Search Bar:` Utilize the search bar to find information online.
 
-`📝 Task Enchantment:` Embark on a quest of productivity with the to-do feature, your loyal companion.
+`📝 To-Do List:` Manage tasks efficiently with the integrated to-do feature.
 
-`💖 Favored Elements:` Keep your cherished features close, favored with a touch of magical allure.
+`💖 Favorite Features:` Pin your preferred functionalities for easy access.
 
-`🌅 Wisdom Scrolls:`Engage with custom quotes that stir wisdom and reflection in your magical journey.
+`📚 Quotes:` Engage with insightful quotes for reflection.
 
 ## 📸 In Action
 
-![Alt text](image.png)
+![Aura Demo Image](./public/demoImage.png)
 
 <!-- ![pepe](https://th.bing.com/th/id/R.ff5f832e40cf3ec7787d1c539bf02ce7?rik=W1CBxsg%2bM7EuEw&pid=ImgRaw&r=0)
 
@@ -69,20 +68,18 @@ To run this project, you will need to have the following on your machine:
     npm dev 
     ```
 
+## 📜 Version History
 
-## 📜 Version Chronicles
+Explore the different stages of Aura's development:
 
-Explore the magical progression of Aura's versions:
+`v1.0 - The Awakening:` Initial launch, setting the foundation.
 
-`v1.0 - The Awakening:` The dawn of Aura's magic, laying the groundwork for its journey.
+`v2.0 - The Evolution:`Enhanced components and layouts for improved user experience.
 
-`v2.0 - The Evolution:` Enhanced components and layout, enhancing the user's magical experience.
+`v3.0 - The Ascension:` Premium features introduced, inspiring further growth.
 
-`v3.0 - The Ascension:` Transcend to new heights as Aura unlocks premium features, invoking inspiration.
-
-View the compelete [🌌 Chronicals](./CHANGELOG.md) details
+For complete details, refer to the [🌌 Version History.](./docs/CHANGELOG.md)
 
 ## ✨ Contribution
 
-Be a part of Aura's enchanting growth [View Contribution Guide](./CONTRIBUTION.MD). Forge your own magical path by forking the repository, casting your spells, and opening a pull request. Together, we'll elevate Aura's charm.
-
+Join us in Aura's journey by contributing. Find guidelines in the [Contribution Guide](./docs/CONTRIBUTION.MD). Fork the repository, make your enhancements, and create a pull request to help Aura flourish.

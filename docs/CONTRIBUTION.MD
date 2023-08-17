@@ -20,7 +20,7 @@ There are several ways you can contribute to Aura:
 
 3. Keep your changes focused and your commits concise. Follow the [commit message conventions](https://www.conventionalcommits.org/) for clarity and consistency.
 
-4. Ensure your code follows our [coding style guidelines](link-to-style-guidelines) to maintain uniformity.
+4. Ensure your code follows our [coding style guidelines](./CODINGSTYLEGUIDE.md) to maintain uniformity.
 
 5. Test your changes to make sure they don't introduce new issues.
 
