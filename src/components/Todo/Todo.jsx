@@ -11,6 +11,7 @@ const Todo = () => {
         handlePress={handlePress}
         icon={todo}
         tooltip={"Todo"}
+        role="button"
       />
     </div>
   );

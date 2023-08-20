@@ -1,5 +1,6 @@
 import Clock from "./Clock/Clock";
 import Footer from "./Footer/Footer";
+import FavouritesModal from "./FavouritesModal/FavouritesModal";
 import Goal from "./Goal/Goal";
 import Greeting from "./Greeting/Greeting";
 import Header from "./Header/Header";
@@ -10,6 +11,7 @@ import Search from "./Search/Search";
 import Settings from "./Settings/Settings";
 import Todo from "./Todo/Todo";
 import WeatherCardModal from "./WeatherCardModal/WeatherCardModal";
+
 
 export {
   Clock,
@@ -24,4 +26,5 @@ export {
   Settings,
   Todo,
   WeatherCardModal,
+  FavouritesModal
 };

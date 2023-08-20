@@ -24,6 +24,10 @@ body {
   background-size: cover !important;
 }
 
+button {
+ background-color: transparent;
+ border: unset;
+}
 /* utility classes */
 
 .u-center {
@@ -73,3 +77,4 @@ body {
 .u-hide{
   display: none;
 }
+

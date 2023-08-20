@@ -4,7 +4,6 @@ import { searchEngines } from "../../constants";
 import { fetchUserData } from "../../utils/fetchUserData";
 import { storeUserData } from "../../utils/storeUserData";
 
-
 import search from "../../assets/icons/search.svg";
 import chevron from "../../assets/icons/chevron.svg";
 import styles from "../../styles/Search/Search.module.css";
@@ -13,7 +12,7 @@ const Search = () => {
   const [toggleDropdown, setToggleDropdown] = useState(false);
   const [toggleSearch, setToggleSearch] = useState(false);
   const [selectedItem, setSelectedItem] = useState({});
-  
+
   const searcBarRef = useRef();
 
   useEffect(() => {
@@ -24,12 +23,11 @@ const Search = () => {
       setSelectedItem(searchEngines[0]);
     }
 
-    // cleanup 
-    return (()=>{
-  
-      setToggleDropdown(false)
-      setToggleSearch(false)
-    })
+    // cleanup
+    return () => {
+      setToggleDropdown(false);
+      setToggleSearch(false);
+    };
   }, []);
 
   // handlers
@@ -67,9 +65,7 @@ const Search = () => {
   };
 
   const handleMouseLeave = () => {
-
     if (toggleDropdown) {
-      
       return;
     }
     if (toggleSearch) {
@@ -82,19 +78,17 @@ const Search = () => {
     }
   };
 
-
-  const handleFocusChange = (event)=>{
+  const handleFocusChange = (event) => {
     if (event.currentTarget === event.target && toggleSearch === false) {
-      setToggleSearch(true)
- }
-  }
-
+      setToggleSearch(true);
+    }
+  };
 
   const handleSearch = (event) => {
     if (event.key === "Enter") {
       const inputValue = searcBarRef.current.value;
       const encodedQuery = encodeURI(inputValue);
-      window.open(selectedItem.query + encodedQuery , "_self");
+      window.open(selectedItem.query + encodedQuery, "_self");
     }
   };
 
@@ -129,13 +123,13 @@ const Search = () => {
           : styles.containerSearchBar
       }
     >
-      <IconContainer icon={search} tooltip={"Search"} alt={"Search"} />
+      <IconContainer icon={search} tooltip={"Search"}  role="button" alt={"Search"} />
       <input
         className={styles.searchBar}
         onChange={handleInputChange}
         onClick={() => {
-          if(toggleDropdown){
-            setToggleDropdown(false)
+          if (toggleDropdown) {
+            setToggleDropdown(false);
           }
           if (!toggleSearch) {
             setToggleSearch(true);
@@ -148,9 +142,7 @@ const Search = () => {
         }}
         placeholder="what are you looking for?"
         type="text"
-        
         onKeyDown={handleSearch}
-        
         ref={searcBarRef}
       />
       <div className={styles.dropdownContainer}>
