@@ -1,38 +1,55 @@
 .settingsModal {
-    position: absolute;
-    padding: 2rem;
-    bottom: 100%;
-    border-radius: 0.5rem;
-    left: 0;
-    background: rgb(2, 0, 36);
-    background: linear-gradient(
-      90deg,
-      rgba(5, 5, 5, 0.6278886554621849) 35%,
-      rgba(0, 0, 0, 0.4990371148459384) 100%
-    );
-    transition: all 0.2s ease-out;
-    backdrop-filter: blur(15px);
-    display: grid;
-    grid-template-areas: "navigator navigatorContent navigatorContent";
-    gap: 1rem;
-
+  position: absolute;
+  padding: 0 0 0 2rem;
+  background-color: beige;
+  bottom: 100%;
+  border-radius: 0.5rem;
+  left: 0;
+  background: rgb(2, 0, 36);
+  background: linear-gradient(
+    90deg,
+    rgba(5, 5, 5, 0.6278886554621849) 35%,
+    rgba(0, 0, 0, 0.4990371148459384) 100%
+  );
+  transition: all 0.2s ease-out;
+  backdrop-filter: blur(15px);
+  display: grid;
+  grid-template-areas: "navigator divider navigatorContent navigatorContent";
+  gap: 2rem;
+  height: 50vh;
+  overflow: hidden;
 }
 
 .navigator {
-    grid-area: navigator;
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-    width: 100%;
+  grid-area: navigator;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  width: 100%;
+
+  padding: 2rem 0;
 }
 
-.navigator > button{
-    text-align: left;
-    padding: .8rem 0.5rem;
-    font-size: 1.4rem;
-    cursor: pointer;
+.navigator > button {
+  text-align: left;
+  padding: 0.4rem 0.5rem;
+  font-size: 1.4rem;
+  cursor: pointer;
+}
+
+.divider {
+  grid-area: divider;
+  height: 100%;
+  width: 1px;
+  background-color: #f3f3f342;
 }
 
 .navigatorContent {
-    grid-area: navigatorContent;
+  padding: 2rem 2rem 2rem 0;
+  display: flex;
+  flex-direction: column;
+  min-width: clamp(25vw, 30vw, 35vw);
+  grid-area: navigatorContent;
+  max-height: 50vh;
+  overflow-y: auto;
 }

@@ -9,6 +9,7 @@ import Main from "./Main/Main";
 import Quote from "./Quote/Quote";
 import Search from "./Search/Search";
 import Settings from "./Settings/Settings";
+import Switch from "./Switch/Switch";
 import Todo from "./Todo/Todo";
 import WeatherCardModal from "./WeatherCardModal/WeatherCardModal";
 
@@ -24,6 +25,7 @@ export {
   Quote,
   Search,
   Settings,
+  Switch,
   Todo,
   WeatherCardModal,
   FavouritesModal

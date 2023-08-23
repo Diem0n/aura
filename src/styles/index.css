@@ -27,7 +27,28 @@ body {
 button {
  background-color: transparent;
  border: unset;
+ cursor: pointer;
 }
+/* ===== Scrollbar CSS ===== */
+  /* Firefox */
+  * {
+    scrollbar-width: auto;
+    scrollbar-color: #878787;
+  }
+
+  /* Chrome, Edge, and Safari */
+  *::-webkit-scrollbar {
+    width: .5rem;
+
+  }
+
+  *::-webkit-scrollbar-track {
+    background: #ffffff00;
+  }
+
+  *::-webkit-scrollbar-thumb {
+    background-color: #696868;
+  }
 /* utility classes */
 
 .u-center {

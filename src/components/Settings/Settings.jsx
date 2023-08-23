@@ -4,7 +4,7 @@ import styles from "../../styles/Settings/Settings.module.css";
 import Modal from "./Modal";
 import { useState } from "react";
 const Settings = () => {
-  const [toggleModal , setToggleModal] = useState(false)
+  const [toggleModal , setToggleModal] = useState(true)
   const handlePress = () => {
    setToggleModal(prev => !prev)
   };
