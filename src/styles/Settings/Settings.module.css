@@ -1,4 +1,3 @@
-
 .settingsModal {
   position: absolute;
   padding: 0 0 0 2rem;
@@ -19,7 +18,6 @@
   gap: 2rem;
   height: 50vh;
   overflow: hidden;
-  
 }
 
 .navigator {

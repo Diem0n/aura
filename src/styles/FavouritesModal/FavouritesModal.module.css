@@ -13,10 +13,3 @@
   transition: all 0.2s ease-out;
   backdrop-filter: blur(15px);
 }
-
-
-.form {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-}
